@@ -1,0 +1,17 @@
+.wrapper {
+    position: relative;
+    max-width: 1920px;
+    margin-inline: auto;
+
+    main{
+        
+        @include min(){
+            margin-left: 5rem;
+        }
+    
+        div{
+            margin-inline: 1rem;
+        }
+    }
+    
+}

@@ -1,0 +1,35 @@
+//variables
+$box-shadow : 0 5px 20px 1px hsla(0,0%,0%,0.5);
+
+//light-colors
+$clr-primary: hsl(0, 100%, 68%);
+$clr-variant : hsl(0,100%,59%);
+$clr-secondary : hsl(180,70%,35%);
+$clr-background : hsl(0,0%,100%);
+$clr-on-primary : hsl(0,0%,98%);
+$clr-on-bg : hsl(0,0%,26%);
+$clr-on-bg-alt : hsla(0,0%,26%,0.7);
+
+//dark-colors
+$dkclr-primary: hsl(267, 100%, 63%);
+$dkclr-variant : hsl(243,100%,69%);
+$dkclr-secondary : hsl(173,97%,43%);
+$dkclr-background : hsl(0,0%,7%);
+$dkclr-on-primary : hsl(0,0%,0%);
+$dkclr-on-bg : hsla(0,0%,100%,0.9);
+$dkclr-on-bg-alt : hsla(0,0%,100%,0.7);
+
+//mixins/extensions
+
+@mixin max{
+    @media only screen and (max-width: 600px){
+        @content;
+    }
+}
+@mixin min{
+    @media only screen and (min-width: 600px){
+        @content;
+    }
+}
+
+//functions
