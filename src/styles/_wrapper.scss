@@ -4,13 +4,75 @@
     margin-inline: auto;
 
     main{
+
+        & > section{
+            min-height: 90vh;
+
+            .title-group{
+                margin-top: 50vh;
+                text-align: center;
+                font-weight: bold;
+
+                h2{
+                    color: var(--on-bg-alt);
+                }
+            }
+
+            .image-container {
+                max-width: 450px;
+                flex: 1 1 300px;
+                margin: 1rem;
+                text-align: center;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            &#home{
+                position: relative;
+
+                .main-image {
+                    position: absolute;
+                    max-width: 720px;
+                    left: 40vw;
+                    top: -30vh;
+                    z-index: -3;
+                }
+            }
+        }
+    
+        & > div{
+            margin-inline: 1rem;
+        }
         
         @include min(){
             margin-left: 5rem;
         }
-    
-        div{
-            margin-inline: 1rem;
+    }
+
+    #recline{
+        position: relative;
+        width: 900px;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+
+    #float {
+        position: fixed;
+        opacity: 0.7;
+        width: 30px;
+        bottom: 60px;
+        right: 10px;
+
+        &:hover{
+            opacity: 0;
+            transform: translate(10px, 30px);
+            transition: all ease-in-out 1.5s ;
+        }
+        
+        @include min(){
+            bottom: 15px;
         }
     }
     
