@@ -1,5 +1,17 @@
 header{
-    display: flex;
-    justify-content: center;
-    background-color: var(--variant);
+    
+    .mid-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--variant);
+
+        .hub-link{
+            color: var(--on-bg);
+
+            &:hover{
+                color: var(--primary);
+            }
+        }
+    }
 }
