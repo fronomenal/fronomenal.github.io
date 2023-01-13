@@ -34,9 +34,13 @@
                 .main-image {
                     position: absolute;
                     max-width: 720px;
-                    left: 40vw;
+                    left: 45vw;
                     top: -30vh;
                     z-index: -3;
+
+                    @include max(){
+                        position: static;
+                    }
                 }
             }
         }
