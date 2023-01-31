@@ -39,11 +39,13 @@ export default class ThemeToggler
     }
 
     private replaceImgSrc(picEl: JQuery, tc: string, fc: string){
-        const oldAttr = picEl.attr("src");
-        if (oldAttr){
-            const newAttr = oldAttr.replace(fc, tc);
-            picEl.attr("src", newAttr);
-        }
+        picEl.each( function (){
+            const oldAttr = this.getAttribute("src");
+            if (oldAttr){
+                const newAttr = oldAttr.replace(fc, tc);
+                this.setAttribute("src", newAttr);
+            }
+        });
     }
 
     private imageMode(toColor: string, fromColor: string) {
