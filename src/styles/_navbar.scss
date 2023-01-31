@@ -7,8 +7,34 @@
     z-index: 3;
     background-color: var(--background);
 
-    .cycle{
-        margin-left: 1.75rem;
+    .theme-wrapper{
+        margin-top: 1.5rem;
+        display: block;
+        position: relative;
+        user-select: none;
+
+        input{
+            position: absolute;
+            opacity: 0;
+            width: 15px;
+            height: 15px;
+            top: 7px;
+            left: 33px;
+            cursor: pointer;
+        }
+
+        .cycle{
+            color: var(--on-bg-alt);
+            margin-left: 1.75rem;
+        }
+
+        &:hover input ~ .cycle{
+            color: var(--on-bg);
+        }
+
+        & input:checked ~ .cycle{
+            color: var(--variant);
+        }
 
     }
 
@@ -104,15 +130,20 @@
             li{
             display: inline-block;
 
-            &:hover{
-                span{
-                    position: static;
-                    transform: translateX(-1.5rem);
-                    opacity: 1;
+                &:hover{
+                    span{
+                        position: static;
+                        transform: translateX(-1.5rem);
+                        opacity: 1;
+                    }
+                    
                 }
-            }
 
             }
+        }
+
+        nav:hover + .theme-wrapper{
+            display: none;
         }
 
     }
