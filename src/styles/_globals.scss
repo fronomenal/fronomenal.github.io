@@ -5,6 +5,7 @@
     font-weight: 400;
   
     color-scheme: light dark;
+
     --primary: #{$clr-primary};
     --variant: #{$clr-variant};
     --secondary: #{$clr-secondary};
@@ -55,11 +56,21 @@ body {
 }
 
 [data-theme="dark"]{
-    --primary: $dkclr-primary;
-    --variant: $dkclr-variant;
-    --secondary: $dkclr-secondary;
-    --background: $dkclr-bg;
-    --on-primary: $dkclr-on-primary;
-    --on-bg: $dkclr-on-bg;
-    --on-bg-alt: $dkclr-on-bg-alt;
+    --primary: #{$dkclr-primary};
+    --variant: #{$dkclr-variant};
+    --secondary: #{$dkclr-secondary};
+    --background: #{$dkclr-background};
+    --on-primary: #{$dkclr-on-primary};
+    --on-bg: #{$dkclr-on-bg};
+    --on-bg-alt: #{$dkclr-on-bg-alt};
+}
+
+[data-theme="light"]{
+    --primary: #{$clr-primary};
+    --variant: #{$clr-variant};
+    --secondary: #{$clr-secondary};
+    --background: #{$clr-background};
+    --on-primary: #{$clr-on-primary};
+    --on-bg: #{$clr-on-bg};
+    --on-bg-alt: #{$clr-on-bg-alt};
 }
