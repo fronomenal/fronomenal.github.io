@@ -9,13 +9,17 @@ export default class ThemeToggler
     reclineSloth: JQuery<HTMLImageElement>;
     svgs: JQuery<HTMLOrSVGElement>;
 
+    primaryColor: string;
 
-    constructor(){
+
+    constructor(primaryRGB: string){
         this.button = jQuery(".theme-wrapper input");
         this.mainImage = jQuery(".main-image");
         this.reclineSloth = jQuery("img#recline");
         this.brandLogo = jQuery(".header-brand a img");
         this.svgs = jQuery("img[src^='svgs']");
+
+        this.primaryColor = primaryRGB;
     }
 
     public registerEvents(){
@@ -23,15 +27,13 @@ export default class ThemeToggler
     }
 
     private toggleAction(){
-        if(this.button.css("color") == "rgb(151, 66, 255)"){
+        if(this.button.css("color") == this.primaryColor){
             // dark to light
             document.documentElement.setAttribute('data-theme', 'light');
-            console.log("light", this.button.css("color"))
             this.imageMode("light", "dark");
         }else{
             // light to dark
             document.documentElement.setAttribute('data-theme', 'dark');
-            console.log("dark", this.button.css("color"))
             this.imageMode("dark", "light");
         }
     }
