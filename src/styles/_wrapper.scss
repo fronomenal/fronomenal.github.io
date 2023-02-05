@@ -35,11 +35,12 @@
                     position: absolute;
                     max-width: 720px;
                     left: 45vw;
-                    top: -30vh;
+                    top: -24vh;
                     z-index: -3;
 
                     @include max(){
-                        position: static;
+                        left: 15vw;
+                        opacity: 0.3;
                     }
                 }
             }
