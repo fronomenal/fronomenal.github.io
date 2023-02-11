@@ -24,6 +24,17 @@ export default class ThemeToggler
 
     public registerEvents(){
         this.button.change(this.toggleAction.bind(this));
+
+        return this;
+    }
+
+    public matchMediaToImgs(){
+        // matches image color to preferred color theme if media query detects a light theme
+        if(this.button.css("color") != this.primaryColor){
+            // dark to light
+            this.imageMode("light", "dark");
+        }
+
     }
 
     private toggleAction(){
