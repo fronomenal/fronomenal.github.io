@@ -23,15 +23,6 @@
                 }
             }
 
-            .image-container {
-                max-width: 420px;
-                margin: 1rem;
-                text-align: center;
-
-                img{
-                    width: 100%;
-                }
-            }
 
             &#home{
                 position: relative;
@@ -85,6 +76,48 @@
                     @include max(){
                         left: 15vw;
                         opacity: 0.3;
+                    }
+                }
+            }
+
+            &#skills{
+
+                .image-container {
+                    width: 470px;
+                    margin: 1rem;
+                    text-align: center;
+
+                    img{
+                        width: 100%;
+                    }
+
+                    @include max(){
+                        width: 500px;
+                        margin-inline: 10%;
+                    }
+                }
+
+                .bullets{
+                    width: 200px;
+
+                    ul{
+                        list-style: none;
+                    }
+
+                    @include max(){
+                        text-align: center;
+                        width: 100%;
+                    }
+
+                    @include min(){
+                        ul li::before {
+                            content: "\2689";  
+                            color: var(--variant);
+                            font-weight: bold; 
+                            display: inline-block; 
+                            width: 1em; 
+                            margin-left: -1em;
+                          }
                     }
                 }
             }
