@@ -237,6 +237,9 @@
                 }
             }
 
+            &#port {
+            }
+
         }
     
         & > div{
@@ -246,6 +249,14 @@
         @include min(){
             margin-left: 5rem;
         }
+    }
+    .separated{
+        background-image: var(--border-img);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-repeat: repeat-x;
+        background-size: auto 6px;
+        background-position: center;
     }
 
     #recline{
