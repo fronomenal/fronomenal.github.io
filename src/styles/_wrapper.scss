@@ -289,12 +289,8 @@
                         padding-top: 25px;
                     }
 
-                    & h5{
-                        margin-bottom: 30px;
-                        font-size: 25px;
-                    }
-
                     &:hover{
+                        z-index: 3;
                         height: auto;
 
                         .port_card{
@@ -327,20 +323,29 @@
 
                     .port_card{
                         position: relative;
-                        width: 90%;
+                        width: 93%;
                         height: auto;
                         top: 240px;
                         padding: 15px;
-                        border-radius: 30px;
+                        border-radius: 15px;
                         margin-inline: auto;
                         background-color: lightblue;
+                        text-align: center;
+
+                        p {
+                            margin: 0;
+                        }
 
                         .lead{
                             color: var(--on-primary);
                             height: 15%;
                             border-radius: 15px;
                             background-color: darken($color: lightblue, $amount: 5);
-                            text-align: center;
+                        }
+
+                        .port_lang{
+                            color: var(--variant);
+                            font-weight: 600;
                         }
                     }
                 }
