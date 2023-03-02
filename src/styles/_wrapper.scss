@@ -249,7 +249,7 @@
                     background: var(--background);
                     padding: 40px;
                     border-radius: 10px;
-                    height: 360px;
+                    height: 507px;
                     overflow: hidden;
                     position: relative;
                     z-index: 1;
@@ -296,15 +296,21 @@
 
                     &:hover{
                         height: auto;
+
+                        .port_card{
+                            top: 0;
+                            transition: all ease-in 0.6s;
+                            
+                        }
                     }
 
-                    &:hover:before{
+                    &:hover::before{
                         top: -72px;
                         left: -40px;
                         border-radius: 50%;
                     }
 
-                    &:hover:after{
+                    &:hover::after{
                         content: "";
                         width: 120%;
                         left: -10%;
@@ -314,6 +320,29 @@
                         transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
                     }
                     
+                    a{
+                        text-decoration: none;
+                        color: var(--clr-on-bg);
+                    }
+
+                    .port_card{
+                        position: relative;
+                        width: 90%;
+                        height: auto;
+                        top: 240px;
+                        padding: 15px;
+                        border-radius: 30px;
+                        margin-inline: auto;
+                        background-color: lightblue;
+
+                        .lead{
+                            color: var(--on-primary);
+                            height: 15%;
+                            border-radius: 15px;
+                            background-color: darken($color: lightblue, $amount: 5);
+                            text-align: center;
+                        }
+                    }
                 }
             }
 
@@ -353,7 +382,7 @@
         &:hover{
             opacity: 0;
             transform: translate(10px, 30px);
-            transition: all ease-in-out 1.5s ;
+            transition: all ease-in-out 1.5s;
         }
         
         @include min(){
