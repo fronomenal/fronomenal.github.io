@@ -97,6 +97,13 @@
                     }
                 }
 
+                .skills-container{
+
+                    @include max(){
+                        margin-left: -3em;
+                    }
+                }
+
                 .bullets{
                     width: 200px;
                     margin-top: 12%;
@@ -238,6 +245,76 @@
             }
 
             &#port {
+                .box1{
+                    background: var(--background);
+                    padding: 40px;
+                    border-radius: 10px;
+                    height: 360px;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 1;
+
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: -220px;
+                        left: -220px;
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 0;
+                        z-index: -1;
+                        background: lightblue;
+                        transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
+                    }
+
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: -72px;
+                        left: -40px;
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        z-index: -2;
+                        background-image: linear-gradient(315deg, var(--variant) 0%, var(--primary) 74%);
+                        transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.15s;
+                    }
+
+                    & .icon{
+                        line-height: 60px;
+                        font-size: 40px;
+                    }
+
+                    &  .content{
+                        padding-top: 25px;
+                    }
+
+                    & h5{
+                        margin-bottom: 30px;
+                        font-size: 25px;
+                    }
+
+                    &:hover{
+                        height: auto;
+                    }
+
+                    &:hover:before{
+                        top: -72px;
+                        left: -40px;
+                        border-radius: 50%;
+                    }
+
+                    &:hover:after{
+                        content: "";
+                        width: 120%;
+                        left: -10%;
+                        top: -10%;
+                        height: 120%;
+                        border-radius: 0;
+                        transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
+                    }
+                    
+                }
             }
 
         }
