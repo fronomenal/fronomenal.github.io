@@ -140,7 +140,7 @@
                             display: inline-block; 
                             width: 1em; 
                             margin-left: -1em;
-                          }
+                        }
                     }
                 }
             }
@@ -330,30 +330,18 @@
 
                     .port_card{
                         position: relative;
-                        height: auto;
+                        width: 100%;
                         top: 240px;
-                        padding: 15px;
-                        border-radius: 60px;
+                        border-top-left-radius: 12px;
+                        border-top-right-radius: 12px;
                         margin-inline: auto;
                         background-color: hsla(195, 53%, 79%, 0.9);
                         text-align: center;
+                        margin-bottom: -41px;
+                        list-style-type:upper-roman;
 
-                        p {
-                            font-weight: 300;
-                            margin: 0;
-                        }
-
-                        .lead{
-                            color: var(--on-primary);
-                            height: 15%;
-                            border-radius: 30px;
-                            border-inline: 5px dashed var(--variant);
-                        }
-
-                        .port_lang{
-                            font-style: bold;
-                            font-size: 18px;
-                            color: var(--primary);
+                        li:hover{
+                            font-weight: 600;
                         }
 
                         &:hover{
