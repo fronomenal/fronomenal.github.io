@@ -19,7 +19,7 @@ export default class ThemeToggler
         this.stapel = this.grid.stapel({
           delay : 30,
           gutter : 60,
-          pileAngles : 3,
+          pileAngles : 5,
           onLoad : (function(){ this.loader.remove();  }).bind(this),
           onBeforeOpen : (function( pileName: any ){ this.name.html( pileName ); }).bind(this),
           onAfterOpen : (function (){ this.close.show(); }).bind(this)

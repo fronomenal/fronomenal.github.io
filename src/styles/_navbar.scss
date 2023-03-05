@@ -143,6 +143,11 @@
             }
         }
 
+        .theme-wrapper{
+            margin-left: auto;
+            padding-right: 9px;
+        }
+
         nav:hover + .theme-wrapper{
             display: none;
         }
