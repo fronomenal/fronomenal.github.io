@@ -260,7 +260,7 @@
                     overflow: hidden;
                     position: relative;
                     z-index: 1;
-                    font-size: smaller;
+                    font-size: inherit;
 
                     &:before{
                         content: "";
@@ -352,6 +352,10 @@
                         &:hover{
                             background-color: darken($color: lightblue, $amount: 6);
                         }
+                    }
+
+                    @include min(){
+                        font-size: smaller;
                     }
                     
 
