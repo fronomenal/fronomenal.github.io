@@ -266,20 +266,20 @@
                 }
             
             
-            .languages{
-                position: relative;
-                text-align: center;
-                }
-            
-            
-            .lang{
-                width: 100px;
-                text-align: center;
-                overflow: hidden;
-                transform: rotate(45deg);
-                height: 100px;
-                position: relative;
-                display: inline-block;
+                .languages{
+                    position: relative;
+                    text-align: center;
+                    }
+                
+                
+                .lang{
+                    width: 100px;
+                    text-align: center;
+                    overflow: hidden;
+                    transform: rotate(45deg);
+                    height: 100px;
+                    position: relative;
+                    display: inline-block;
 
                     img{
                         transform: rotate(-45deg);
@@ -291,30 +291,30 @@
                     }
 
                     &.order{
-                        top: -210px;
+                        top: -90px;
 
                     }
 
                     &.one{
-                        left: 43px;
+                        left: 21px;
                         position: relative;
-                        top: -180px;
+                        top: -59px;
                     }
 
 
 
                     &.two{
-                        left: -38px;
+                        left: -16px;
                         position: relative;
-                        top: -180px;
+                        top: -59px;
                     }
                     
                     
                     
                     &.three{
-                        left: 84px;
+                        left: 40px;
                         position: relative;
-                        top: -120px;
+                        top: -24px;
                     }
                     
                     
@@ -322,66 +322,69 @@
                     &.four{
                         left: 2px;
                         position: relative;
-                        top: -120px;
+                        top: -24px;
                     }
                     
                     
                     &.five{
-                        left: -81px;
+                        left: -35px;
                         position: relative;
-                        top: -118px;
+                        top: -24px;
                     }
                     
                     &.six{
-                        left: 124px;
+                        left: 59px;
                         position: relative;
-                        top: -59px;
+                        top: 11px;
                     }
                     
                     
                     
                     &.seven{
-                        left: 42px;
+                        left: 21px;
                         position: relative;
-                        top: -59px;
+                        top: 11px;
                     }
                     
                     
                     &.eight{
-                        left: -39px;
+                        left: -16px;
                         position: relative;
-                        top: -59px;
+                        top: 11px;
                     }
                     
                     
                     
                     &.nine{
-                        left: -124px;
+                        left: -54px;
                         position: relative;
-                        top: -57px;
+                        top: 11px;
                     }
                     
                     
                     &.ten{
-                       left: 84px;
+                        left: 40px;
                         position: relative;
+                        top: 46px;
                     }
                     
                     
                     &.eleven{
-                       left: 2px;
+                        left: 2px;
                         position: relative;
+                        top: 46px;
                     }
                     
                     
                     &.twelve{
-                       left: -78px;
+                        left: -35px;
                         position: relative;
+                        top: 46px;
                     }
 
                     .Hover{
-                        width: 284px;
-                        height: 284px;
+                        width: 240px;
+                        height: 240px;
                         left: 0;
                         position: absolute;
                         top: 0;
@@ -450,14 +453,49 @@
                         transform: rotate(45deg);
                         height: 135px;
         
-                            img{
-                                width: 190px;
-                                height: 190px;
-                                margin: -26px 0 0 -26px;
-        
-                            }
+                        img{
+                            width: 190px;
+                            height: 190px;
+                            margin: -26px 0 0 -26px;
+    
+                        }
+
+                        .Hover{
+                            width: 284px;
+                            height: 284px;
+                        }
 
                     }
+                }
+
+                .mob {
+                    display: block;
+
+                    .cus-box{
+                        position: relative;
+                    }
+
+
+                    .frequency-box{
+                        background: #de3c2f none repeat scroll 0 0;
+                        display: table;
+                        width: 100px;
+                        height: 100px;
+                        top: -200px;
+                        left: 4px;
+                        margin: 0 auto;
+                        position: absolute;
+                        right: 0;
+                        text-align: center;
+                        z-index: 1;
+                        transform: rotate(45deg);
+                        transition: all 700ms ease; 
+                    }
+
+                    @include min(){
+                        display: none;
+                    }
+
                 }
 
             }
