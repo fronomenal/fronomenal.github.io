@@ -251,6 +251,217 @@
                 }
             }
 
+            &#langs{
+                
+                .subtitle{
+                    color: var(--on-bg);
+                    display: inline-block;
+                    font-size: 15px;
+                    font-weight: 600;
+                    padding: 15px 65px;
+                    text-transform: uppercase;
+                    margin-bottom: 100px;
+                    border-bottom: 3px dashed var(--on-bg-alt);
+                    border-radius: 50px;
+                }
+            
+            
+            .languages{
+                position: relative;
+                text-align: center;
+                }
+            
+            
+            .lang{
+                width: 100px;
+                text-align: center;
+                overflow: hidden;
+                transform: rotate(45deg);
+                height: 100px;
+                position: relative;
+                display: inline-block;
+
+                    img{
+                        transform: rotate(-45deg);
+                        width: 140px;
+                        height: 140px;
+                        margin: -20px 0 0 -20px;
+                        filter: blur(0);
+
+                    }
+
+                    &.order{
+                        top: -210px;
+
+                    }
+
+                    &.one{
+                        left: 43px;
+                        position: relative;
+                        top: -180px;
+                    }
+
+
+
+                    &.two{
+                        left: -38px;
+                        position: relative;
+                        top: -180px;
+                    }
+                    
+                    
+                    
+                    &.three{
+                        left: 84px;
+                        position: relative;
+                        top: -120px;
+                    }
+                    
+                    
+                    
+                    &.four{
+                        left: 2px;
+                        position: relative;
+                        top: -120px;
+                    }
+                    
+                    
+                    &.five{
+                        left: -81px;
+                        position: relative;
+                        top: -118px;
+                    }
+                    
+                    &.six{
+                        left: 124px;
+                        position: relative;
+                        top: -59px;
+                    }
+                    
+                    
+                    
+                    &.seven{
+                        left: 42px;
+                        position: relative;
+                        top: -59px;
+                    }
+                    
+                    
+                    &.eight{
+                        left: -39px;
+                        position: relative;
+                        top: -59px;
+                    }
+                    
+                    
+                    
+                    &.nine{
+                        left: -124px;
+                        position: relative;
+                        top: -57px;
+                    }
+                    
+                    
+                    &.ten{
+                       left: 84px;
+                        position: relative;
+                    }
+                    
+                    
+                    &.eleven{
+                       left: 2px;
+                        position: relative;
+                    }
+                    
+                    
+                    &.twelve{
+                       left: -78px;
+                        position: relative;
+                    }
+
+                    .Hover{
+                        width: 284px;
+                        height: 284px;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        text-align: center;
+                        background: rgba(64,64,64,0.85);
+                        transform: rotate(-45deg) scale(0);
+                        transition: all 400ms ease;
+                        margin: -41px 0 0 -41px;
+                        line-height: 20px;
+                        opacity: 0;
+                        visibility: hidden;
+
+                        a.prePhoto{
+                            background: var(--variant) none repeat scroll 0 0;
+                            border-radius: 50%;
+                            bottom: 0;
+                            color: white;
+                            font-size: 20px;
+                            height: 40px;
+                            left: -50px;
+                            margin: auto;
+                            position: absolute;
+                            right: 0;
+                            top: -50%;
+                            transform: translateY(50%);
+                            width: 40px;
+                            
+                            &:hover{
+                                color: white;
+                            }
+                            
+                        }
+
+                        a i{
+                            position: relative;
+                            top: 10px;
+                        }
+
+                        a.details{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            font-size: 20px;
+                            color: #404040;
+                            background: white;
+                            position: absolute;
+                            left: 0;
+                            top: -50%;
+                            transform: translateY(50%);
+                            right: -50px;
+                            bottom: 0;
+                            margin: auto;
+                        }
+
+                    }
+
+                    &:hover .Hover{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: rotate(-45deg) scale(1);
+                        filter: blur(0);
+                    }
+
+                    @include min(){
+                        width: 135px;
+                        transform: rotate(45deg);
+                        height: 135px;
+        
+                            img{
+                                width: 190px;
+                                height: 190px;
+                                margin: -26px 0 0 -26px;
+        
+                            }
+
+                    }
+                }
+
+            }
+
             &#port {
                 .box1{
                     background: var(--background);
