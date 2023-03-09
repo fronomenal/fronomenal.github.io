@@ -33,3 +33,14 @@ $dkclr-on-bg-alt : hsla(0,0%,100%,0.7);
 }
 
 //functions
+
+
+//keyframes
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

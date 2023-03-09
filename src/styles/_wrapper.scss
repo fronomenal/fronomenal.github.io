@@ -383,19 +383,15 @@
                     }
 
                     .Hover{
-                        width: 240px;
-                        height: 240px;
-                        left: 0;
                         position: absolute;
                         top: 0;
+                        left: 0;
                         text-align: center;
                         background: rgba(64,64,64,0.85);
                         transform: rotate(-45deg) scale(0);
                         transition: all 400ms ease;
                         margin: -41px 0 0 -41px;
                         line-height: 20px;
-                        opacity: 0;
-                        visibility: hidden;
 
                         a.prePhoto{
                             background: var(--variant) none repeat scroll 0 0;
@@ -413,12 +409,13 @@
                             width: 40px;
                             
                             &:hover{
-                                color: white;
+                                color: black;
                             }
                             
                         }
 
                         a i{
+                            pointer-events: none;
                             position: relative;
                             top: 10px;
                         }
@@ -429,7 +426,7 @@
                             border-radius: 50%;
                             font-size: 20px;
                             color: #404040;
-                            background: white;
+                            background: lightgray;
                             position: absolute;
                             left: 0;
                             top: -50%;
@@ -437,6 +434,15 @@
                             right: -50px;
                             bottom: 0;
                             margin: auto;
+
+                            &:hover{
+                                background: white;
+                            }
+                        }
+
+                        @media (pointer:none), (pointer:coarse){
+                            visibility: visible;
+                            opacity: 0.7;
                         }
 
                     }
@@ -587,6 +593,59 @@
                         display: none;
                     }
 
+                }
+
+                #lang-details-lighbox {
+
+                    .lightbox-modal {
+
+                        .modal-content {
+                            background: var(--background);
+                        }
+                        .btn-close {
+                            position: absolute;
+                            top: 20px;
+                            right: 18px;
+                            font-size: 1.2rem;
+                            z-index: 10;
+                        }
+
+                        .modal-body {
+                        display: flex;
+                        align-items: center;
+                        padding: 0;
+                        text-align: center;
+                        }
+
+                        img {
+                        width: auto;
+                        max-height: 100vh;
+                        max-width: 100%;
+                        }
+
+                        .carousel-caption {
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: var(--background);
+                        }
+
+                        .carousel-control-prev,
+                        .carousel-control-next {
+                        top: 50%;
+                        bottom: auto;
+                        transform: translateY(-50%);
+                        width: auto;
+                        }
+
+                        .carousel-control-prev {
+                        left: 10px;
+                        }
+
+                        .carousel-control-next {
+                        right: 10px;
+                        }
+                    }
                 }
 
             }

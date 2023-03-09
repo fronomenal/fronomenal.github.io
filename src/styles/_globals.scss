@@ -55,6 +55,41 @@ body {
     &::-webkit-scrollbar-thumb{
         background: var(--on-bg-alt);
     }
+
+    .cus-modal{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background);
+        margin-top: -1px;
+        z-index: 3;
+        animation: zoom 0.3s ease-in-out;
+
+        img{
+            width: 50%;
+            object-fit: cover;
+        }
+
+        .cus-close-btn {
+            color: var(--on-bg-alt);
+            font-size: 25px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                color: var(--on-bg);
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
 [data-theme="dark"]{
