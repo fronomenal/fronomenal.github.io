@@ -613,6 +613,35 @@
                     }
 
                 }
+                
+                .lang-proficiency{
+                    display: none;
+                    background-color: var(--background);
+                    border-radius: 12px;
+                    margin-top: -100px;
+
+                    .circle-progress-value {
+                        stroke: var(--primary);
+                        stroke-width: 6px;
+                    }
+                    .circle-progress-circle {
+                        stroke-width: 6px;
+                        stroke: lighten($color: lightblue, $amount: 09);
+                    }
+                    .circle-progress-text {
+                        font-family: "Courier New";
+                        fill: var(--on-bg-alt);
+                    }
+
+                    .pf-level{
+                        margin-bottom: 20px;
+                        color: var(--variant);
+                    }
+
+                    @include min(){
+                        margin-top: -120px;
+                    }
+                }
 
             }
 
