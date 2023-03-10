@@ -613,7 +613,7 @@ import jQuery from "jquery"; // custom JQuery module import
 							}
 
 						} ) :
-						this._applyTransition( $item, { opacity : 0 }, this.options.otherPileAnimation.closeSpeed );
+						this._applyTransition( $item, { display : "none" }, this.options.otherPileAnimation.closeSpeed );
 
 				}
 
@@ -699,7 +699,7 @@ import jQuery from "jquery"; // custom JQuery module import
 								self.options.onAfterClose( $el.data( 'pileName' ), cnt );
 							}
 
-						} ) : this._applyTransition( $item, { opacity : 1 }, this.options.otherPileAnimation.openSpeed, function( evt ) {
+						} ) : this._applyTransition( $item, { display : "inline-block" }, this.options.otherPileAnimation.openSpeed, function( evt ) {
 
 							var target = this.target || this.nodeName;
 							if( target !== 'LI' ) {

@@ -1,4 +1,5 @@
 import jQuery from "jquery";
+import {ScrollToSmooth, easeOutCubic} from 'scrolltosmooth';
 
 export default class ThemeToggler
 {
@@ -8,23 +9,37 @@ export default class ThemeToggler
     loader: JQuery<HTMLElement>;
 
     stapel: any;
+    smoothScroll: ScrollToSmooth | undefined;
 
 
     constructor(){
-        this.grid = jQuery("#tp-grid");
-        this.name = jQuery("#pile-name");
-        this.loader = jQuery('<div class="loader">Loading...</div>').insertBefore(this.grid);
-        this.close = jQuery("#close");
+      this.grid = jQuery("#tp-grid");
+      this.name = jQuery("#pile-name");
+      this.loader = jQuery('<div class="loader">Loading...</div>').insertBefore(this.grid);
+      this.close = jQuery("#close");
 
-        this.stapel = this.grid.stapel({
-          delay : 30,
-          gutter : 60,
-          pileAngles : 5,
-          onLoad : (function(){ this.loader.remove();  }).bind(this),
-          onBeforeOpen : (function( pileName: any ){ this.name.html( pileName ); }).bind(this),
-          onAfterOpen : (function (){ this.close.show(); }).bind(this)
-      });;
-    }
+      this.stapel = this.grid.stapel({
+        delay : 30,
+        gutter : 60,
+        pileAngles : 5,
+        onLoad : () => this.loader.remove(),
+        onBeforeOpen : ( pileName: any ) => this.name.html( pileName ),
+        onAfterOpen :  () => this.close.show()
+      });
+
+      let recimg = jQuery('#recline');
+      if (recimg){
+        this.smoothScroll = new ScrollToSmooth(recimg, {
+          targetAttribute: 'data-scrollto',
+          duration: 400,
+          durationRelative: false,
+          durationMin: false,
+          durationMax: false,
+          easing: easeOutCubic,
+          offset: null
+        });
+        this.smoothScroll.init();
+      }}
 
     public registerEvents(){
       this.close.click(this.toggleAction.bind(this));
