@@ -291,14 +291,14 @@
                     }
 
                     &.order{
-                        top: -90px;
+                        top: -140px;
 
                     }
 
                     &.one{
                         left: 21px;
                         position: relative;
-                        top: -59px;
+                        top: -109px;
                     }
 
 
@@ -306,7 +306,7 @@
                     &.two{
                         left: -16px;
                         position: relative;
-                        top: -59px;
+                        top: -109px;
                     }
                     
                     
@@ -314,7 +314,7 @@
                     &.three{
                         left: 40px;
                         position: relative;
-                        top: -24px;
+                        top: -74px;
                     }
                     
                     
@@ -322,20 +322,20 @@
                     &.four{
                         left: 2px;
                         position: relative;
-                        top: -24px;
+                        top: -74px;
                     }
                     
                     
                     &.five{
                         left: -35px;
                         position: relative;
-                        top: -24px;
+                        top: -74px;
                     }
                     
                     &.six{
                         left: 59px;
                         position: relative;
-                        top: 11px;
+                        top: -39px;
                     }
                     
                     
@@ -343,14 +343,14 @@
                     &.seven{
                         left: 21px;
                         position: relative;
-                        top: 11px;
+                        top: -39px;
                     }
                     
                     
                     &.eight{
                         left: -16px;
                         position: relative;
-                        top: 11px;
+                        top: -39px;
                     }
                     
                     
@@ -358,28 +358,28 @@
                     &.nine{
                         left: -54px;
                         position: relative;
-                        top: 11px;
+                        top: -39px;
                     }
                     
                     
                     &.ten{
                         left: 40px;
                         position: relative;
-                        top: 46px;
+                        top: -4px;
                     }
                     
                     
                     &.eleven{
                         left: 2px;
                         position: relative;
-                        top: 46px;
+                        top: -4px;
                     }
                     
                     
                     &.twelve{
                         left: -35px;
                         position: relative;
-                        top: 46px;
+                        top: -4px;
                     }
 
                     .Hover{
@@ -434,8 +434,8 @@
                             position: absolute;
                             left: 0;
                             top: -50%;
-                            transform: translateY(50%);
                             right: -50px;
+                            transform: translateY(50%);
                             bottom: 0;
                             margin: auto;
 
@@ -445,9 +445,23 @@
                         }
 
                         @media (pointer:none), (pointer:coarse){
+                            left: -50%;
+                            top: 0%;
                             opacity: 0.7;
                             visibility: visible;
-                            transform: rotate(-45deg) scale(1);
+                            transform: rotate(45deg) scale(1);
+                            background: none;
+
+                            a.prePhoto{
+                                top: -48%;
+                                left: -45%;
+                            }
+
+                            a.details{
+                                top: -48%;
+                                left: 25%;
+
+                            }
                         }
 
                     }
@@ -471,14 +485,14 @@
                         }
 
                         &.order{
-                            top: -90px;
+                            top: -166px;
     
                         }
     
                         &.one{
                             left: 28px;
                             position: relative;
-                            top: -59px;
+                            top: -135px;
                         }
     
     
@@ -486,7 +500,7 @@
                         &.two{
                             left: -25px;
                             position: relative;
-                            top: -59px;
+                            top: -135px;
                         }
                         
                         
@@ -494,7 +508,7 @@
                         &.three{
                             left: 54px;
                             position: relative;
-                            top: -14px;
+                            top: -90px;
                         }
                         
                         
@@ -502,20 +516,20 @@
                         &.four{
                             left: 1px;
                             position: relative;
-                            top: -14px;
+                            top: -90px;
                         }
                         
                         
                         &.five{
                             left: -51px;
                             position: relative;
-                            top: -14px;
+                            top: -90px;
                         }
                         
                         &.six{
                             left: 80px;
                             position: relative;
-                            top: 31px;
+                            top: -45px;
                         }
                         
                         
@@ -523,14 +537,14 @@
                         &.seven{
                             left: 28px;
                             position: relative;
-                            top: 31px;
+                            top: -45px;
                         }
                         
                         
                         &.eight{
                             left: -25px;
                             position: relative;
-                            top: 31px;
+                            top: -45px;
                         }
                         
                         
@@ -538,28 +552,28 @@
                         &.nine{
                             left: -77px;
                             position: relative;
-                            top: 31px;
+                            top: -45px;
                         }
                         
                         
                         &.ten{
                             left: 54px;
                             position: relative;
-                            top: 76px;
+                            top: 0px;
                         }
                         
                         
                         &.eleven{
                             left: 1px;
                             position: relative;
-                            top: 76px;
+                            top: 0px;
                         }
                         
                         
                         &.twelve{
                             left: -51px;
                             position: relative;
-                            top: 76px;
+                            top: 0px;
                         }
 
                         .Hover{
@@ -583,7 +597,7 @@
                         display: table;
                         width: 100px;
                         height: 100px;
-                        top: -200px;
+                        top: -250px;
                         left: 4px;
                         margin: 0 auto;
                         position: absolute;
@@ -904,6 +918,7 @@
         max-width: 640px;
         left: 50vw;
         transform: translateX(-50%);
+        cursor: pointer;
     }
 
     #float {
