@@ -397,6 +397,10 @@
                         opacity: 0;
                         visibility: hidden;
 
+                        a {
+                            pointer-events: none;
+                        }
+
                         a.prePhoto{
                             background: var(--variant) none repeat scroll 0 0;
                             border-radius: 50%;
@@ -449,19 +453,8 @@
                             top: 0%;
                             opacity: 0.7;
                             visibility: visible;
-                            transform: rotate(45deg) scale(1);
                             background: none;
-
-                            a.prePhoto{
-                                top: -48%;
-                                left: -45%;
-                            }
-
-                            a.details{
-                                top: -48%;
-                                left: 25%;
-
-                            }
+                            transform: rotate(45deg) scale(1);
                         }
 
                     }
@@ -471,6 +464,14 @@
                         visibility: visible;
                         transform: rotate(-45deg) scale(1);
                         filter: blur(0);
+
+                        a {
+                            pointer-events: visible;
+                        }
+
+                        @media (pointer:none), (pointer:coarse){
+                            transform: rotate(45deg) scale(1);
+                        }
                     }
 
                     @include min(){
@@ -617,8 +618,15 @@
                 .lang-proficiency{
                     display: none;
                     background-color: var(--background);
+                    max-width: 780px;
+                    margin-inline: auto;
                     border-radius: 12px;
                     margin-top: -100px;
+
+                    .circle-progress{
+                        width: 120px;
+                        height: auto;
+                    }
 
                     .circle-progress-value {
                         stroke: var(--primary);
@@ -640,6 +648,10 @@
 
                     @include min(){
                         margin-top: -120px;
+
+                        .circle-progress{
+                            width: 150px;
+                        }
                     }
                 }
 
