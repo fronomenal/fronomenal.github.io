@@ -321,7 +321,7 @@
                     }
 
                     &.order{
-                        top: -140px;
+                        visibility: hidden;
 
                     }
 
@@ -517,6 +517,7 @@
 
                         &.order{
                             top: -166px;
+                            visibility: visible;
     
                         }
     
@@ -624,7 +625,7 @@
 
 
                     .frequency-box{
-                        background: #de3c2f none repeat scroll 0 0;
+                        background: var(--secondary) none repeat scroll 0 0;
                         display: table;
                         width: 100px;
                         height: 100px;
@@ -659,7 +660,7 @@
                     }
 
                     .circle-progress-value {
-                        stroke: var(--primary);
+                        stroke: var(--secondary);
                         stroke-width: 6px;
                     }
                     .circle-progress-circle {
@@ -672,18 +673,18 @@
                     }
 
                     h4 {
-                        color: lightblue;
+                        color: var(--secondary);
                     }
 
                     .pf-level{
                         font-weight: 600;
                         color:  var(--on-bg-alt);;
                         span{
-                            color: var(--primary);}
+                            color: var(--secondary);}
                     }
 
                     @include min(){
-                        margin-top: -120px;
+                        margin-top: -150px;
 
                         .circle-progress{
                             width: 150px;
