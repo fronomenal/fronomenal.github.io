@@ -150,7 +150,7 @@
                 width: 300px;
 
                 & img{
-                    width: 300px;
+                    width: 350px;
                     border: 5px solid lightblue;
                     border-radius: 50%;
                     margin-left: -30px;
@@ -158,8 +158,8 @@
 
                 & .social-icons{
                     position: absolute;
-                    bottom: 1.5%;
-                    left: 15%;
+                    bottom: 9%;
+                    left: 23%;
 
                     & a{
                         width: 36px;
@@ -207,11 +207,32 @@
             }
 
             .info{
+                background: var(--background);
+                border-radius: 15px;
                 text-align: center;
                 padding-top: 30px;
                 width: 300px;
                 padding-right: 57px;
+                margin-top: 3px;
                 margin-inline: auto;
+
+                .education-box{
+                    border-radius: 10px;
+                    list-style: none;
+                    color: var(--on-bg-alt);
+                    margin-left: -30px;
+                    margin-top: -21px;
+
+                    h6{
+                        color: var(--on-bg-alt);
+                        margin: 5px 0;
+                    }
+                    
+                    li+li{
+                        margin-top: 12px;
+                    }
+                }
+
 
                 & h3{
                     font-weight: 400;
@@ -230,9 +251,16 @@
             }
 
             .about-info{
+                background: var(--background);
+                border-radius: 15px;
+                margin-top: 25px;
+
+                .title{
+                    margin-bottom: -21px;
+                }
  
                 .info-list{
-                    padding-top: 15px;
+                    padding-top: 12px;
                                     
                     & ul{
                         margin: 0;
@@ -241,7 +269,7 @@
                     }
 
                     & li{
-                        padding: 4px 0;
+                        padding: 2px 0;
                     }
 
                     & label{
