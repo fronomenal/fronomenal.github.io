@@ -221,7 +221,9 @@
 
                 & p{
                     margin: 0;
-                    font-size: 16px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: lightblue;
                     
                 }
 
@@ -634,7 +636,7 @@
                     }
                     .circle-progress-circle {
                         stroke-width: 2px;
-                        stroke: lighten($color: lightblue, $amount: 09);
+                        stroke: lighten($color: lightblue, $amount: 9);
                     }
                     .circle-progress-text {
                         font-family: "Courier New";
@@ -642,8 +644,7 @@
                     }
 
                     .pf-level{
-                        margin-bottom: 20px;
-                        color: var(--variant);
+                        color: lightblue;
                     }
 
                     @include min(){
