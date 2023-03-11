@@ -671,8 +671,15 @@
                         fill: var(--on-bg-alt);
                     }
 
-                    .pf-level{
+                    h4 {
                         color: lightblue;
+                    }
+
+                    .pf-level{
+                        font-weight: 600;
+                        color:  var(--on-bg-alt);;
+                        span{
+                            color: var(--primary);}
                     }
 
                     @include min(){
