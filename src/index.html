@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -16,835 +16,766 @@
       new WOW().init();
     </script>
     <title>Fronomenal Page</title>
+    <style>
+      .page {
+        opacity: 0;
+      }
+    </style>
   </head>
   <body>
     <div class="loader-wrapper">
       <span class="loader"><span class="loader-inner"></span></span>
-    </div>
-    <header id="head">
-      <div class="mid-header">
-        <div class="header-brand">
-          <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M13.92 10.86C14.04 11.85 14.12 13.1 13.62 14C13.5 14.27 13.28 14.5 13.03 14.64C12.8 14.79 12.5 14.86 12.14 14.87C11.72 14.87 11.33 14.73 11 14.47C10.87 14.34 10.75 14.19 10.66 14C10.57 13.83 10.5 13.64 10.5 13.43H8.72C8.73 13.84 8.84 14.22 9 14.58C9.2 14.94 9.45 15.25 9.76 15.5C11.2 16.83 13.85 16.62 15.06 15.13C16.37 13.46 16.34 10.54 15.05 8.87C13.83 7.35 11.13 7.16 9.68 8.5C9.38 8.78 9.15 9.12 9 9.5C8.81 9.9 8.72 10.33 8.7 10.8H10.5C10.5 10.37 10.69 9.94 10.97 9.63C11.26 9.34 11.67 9.14 12.12 9.14C12.81 9.15 13.33 9.44 13.62 10C13.76 10.24 13.87 10.53 13.92 10.86M12 2C6.5 2 2 6.5 2 12C2.53 25.26 21.47 25.27 22 12C22 6.5 17.5 2 12 2M4 12C4.44 1.39 19.56 1.39 20 12C20 16.41 16.41 20 12 20S4 16.41 4 12Z" />
-          </svg>
-          <a href="#dev-page">
-            <img src="imgs/sloth-brand-dark.png" alt="logo">
-          </a>
-        </div>
-        <a class="hub-link" href="https://github.com/fronomenal" target="_blank">
-          <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-          </svg>
-        </a>
-      </div>
-    </header>
-    <div id="wrapper">
-      <div class="navbar-left d-flex">
-        <div class="nav-expanse mb-5">
-          <span class="logo-text"> Fronomenal </span>
-          <a href="#head">
-            <svg class="expanse-logo" viewBox="0 0 448 512">
-              <path d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z"/>
-            </svg>
-          </a>
-        </div>
-        <nav>
-          <ul class="list-unstyled">
-            <li class=""><a href="#profile" class="nav-link active" data-toggle="tooltip">
-              <svg class="nav-icon" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M17,3H14V6H10V3H7A2,2 0 0,0 5,5V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V5A2,2 0 0,0 17,3M12,8A2,2 0 0,1 14,10A2,2 0 0,1 12,12A2,2 0 0,1 10,10A2,2 0 0,1 12,8M16,16H8V15C8,13.67 10.67,13 12,13C13.33,13 16,13.67 16,15V16M13,5H11V1H13V5M16,19H8V18H16V19M12,21H8V20H12V21Z" />
-            </svg>
-            <span class="logo-text ms-4 lead"> Profile </span>
-            </a></li>
-            <li class=""><a href="#contact" class="nav-link " data-toggle="tooltip">
-              <svg class="nav-icon" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M20,0H4V2H20V0M4,24H20V22H4V24M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M12,6.75A2.25,2.25 0 0,1 14.25,9A2.25,2.25 0 0,1 12,11.25A2.25,2.25 0 0,1 9.75,9A2.25,2.25 0 0,1 12,6.75M17,17H7V15.5C7,13.83 10.33,13 12,13C13.67,13 17,13.83 17,15.5V17Z" />
-            </svg>
-            <span class="logo-text ms-4 lead"> Contact </span>
-            </a></li>
-            <li class=""><a href="#langs" class="nav-link " data-toggle="tooltip">
-              <svg class="nav-icon" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M15.2,20H13.8L12,13.2L10.2,20H8.8L6.6,11H8.1L9.5,17.8L11.3,11H12.6L14.4,17.8L15.8,11H17.3L15.2,20M13,9V3.5L18.5,9H13Z" />
-              </svg>
-              <span class="logo-text ms-4 lead"> Dialects </span>
-              </a>
-            </li>
-            <li class=""><a href="#skills" class="nav-link " data-toggle="tooltip">
-              <svg class="nav-icon" viewBox="0 0 640 512">
-                <path fill="currentColor" d="M104 96h-48C42.75 96 32 106.8 32 120V224C14.33 224 0 238.3 0 256c0 17.67 14.33 32 31.1 32L32 392C32 405.3 42.75 416 56 416h48C117.3 416 128 405.3 128 392v-272C128 106.8 117.3 96 104 96zM456 32h-48C394.8 32 384 42.75 384 56V224H256V56C256 42.75 245.3 32 232 32h-48C170.8 32 160 42.75 160 56v400C160 469.3 170.8 480 184 480h48C245.3 480 256 469.3 256 456V288h128v168c0 13.25 10.75 24 24 24h48c13.25 0 24-10.75 24-24V56C480 42.75 469.3 32 456 32zM608 224V120C608 106.8 597.3 96 584 96h-48C522.8 96 512 106.8 512 120v272c0 13.25 10.75 24 24 24h48c13.25 0 24-10.75 24-24V288c17.67 0 32-14.33 32-32C640 238.3 625.7 224 608 224z"/>
-              </svg>
-              <span class="logo-text ms-4 lead"> Skill Sets </span>
-            </a></li>
-            <li class=""><a href="#port" class="nav-link " data-toggle="tooltip">
-                <svg class="nav-icon" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M4,2A1,1 0 0,0 3,3V4A1,1 0 0,0 4,5H5V14H11V16.59L6.79,20.79L8.21,22.21L11,19.41V22H13V19.41L15.79,22.21L17.21,20.79L13,16.59V14H19V5H20A1,1 0 0,0 21,4V3A1,1 0 0,0 20,2H4Z" />
-              </svg>
-              <span class="logo-text ms-4 lead"> Portfolio </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="theme-wrapper">
-          <input type="checkbox">
-          <span class="cycle mt-auto mb-4">
+    </div><div class="page">
+      
+      <header id="head">
+        <div class="mid-header">
+          <div class="header-brand">
             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M3.55 19.09L4.96 20.5L6.76 18.71L5.34 17.29M12 6C8.69 6 6 8.69 6 12S8.69 18 12 18 18 15.31 18 12C18 8.68 15.31 6 12 6M20 13H23V11H20M17.24 18.71L19.04 20.5L20.45 19.09L18.66 17.29M20.45 5L19.04 3.6L17.24 5.39L18.66 6.81M13 1H11V4H13M6.76 5.39L4.96 3.6L3.55 5L5.34 6.81L6.76 5.39M1 13H4V11H1M13 20H11V23H13" />
+              <path fill="currentColor" d="M13.92 10.86C14.04 11.85 14.12 13.1 13.62 14C13.5 14.27 13.28 14.5 13.03 14.64C12.8 14.79 12.5 14.86 12.14 14.87C11.72 14.87 11.33 14.73 11 14.47C10.87 14.34 10.75 14.19 10.66 14C10.57 13.83 10.5 13.64 10.5 13.43H8.72C8.73 13.84 8.84 14.22 9 14.58C9.2 14.94 9.45 15.25 9.76 15.5C11.2 16.83 13.85 16.62 15.06 15.13C16.37 13.46 16.34 10.54 15.05 8.87C13.83 7.35 11.13 7.16 9.68 8.5C9.38 8.78 9.15 9.12 9 9.5C8.81 9.9 8.72 10.33 8.7 10.8H10.5C10.5 10.37 10.69 9.94 10.97 9.63C11.26 9.34 11.67 9.14 12.12 9.14C12.81 9.15 13.33 9.44 13.62 10C13.76 10.24 13.87 10.53 13.92 10.86M12 2C6.5 2 2 6.5 2 12C2.53 25.26 21.47 25.27 22 12C22 6.5 17.5 2 12 2M4 12C4.44 1.39 19.56 1.39 20 12C20 16.41 16.41 20 12 20S4 16.41 4 12Z" />
             </svg>
-          </span>
+            <a href="#dev-page">
+              <img src="imgs/sloth-brand-dark.png" alt="logo">
+            </a>
+          </div>
+          <a class="hub-link" href="https://github.com/fronomenal" target="_blank">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+          </a>
         </div>
-      </div>
-      <main class="ps-3">
-        <section id="home">
-          <div class="title-group text-start" id="dev-page">
-            <h1 class="display-1 pb-1">Developer Page</h1>
-            <h3>Fronomenal</h3>
-            <h4>COMPUTERPHILE | POLYGLOT</h4>
-            <p class="lead">Favorite languages C++; Golang; Python</p>
-            <p class="text-secondary">Hi there! I am King, a recent CS graduate and knowledge seeker</p>
-            <h2 class="mt-3">Welcome to my DevSite!</h2>
-            <div class="btn-bar">
-                <a href="#head">Download CV</a>
-            </div>
-            <img class="main-image" src="/imgs/cuslesloth.dark.png" alt="">
+      </header>
+      <div id="wrapper">
+        <div class="navbar-left d-flex">
+          <div class="nav-expanse mb-5">
+            <span class="logo-text"> Fronomenal </span>
+            <a href="#head">
+              <svg class="expanse-logo" viewBox="0 0 448 512">
+                <path d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z"/>
+              </svg>
+            </a>
           </div>
-        </section>
-        <section id="profile">
-          <h1 class="mb-5">Profile</h1>
-          <div class="container">
-            <div class="about-me mx-auto">
-                <div class="img-container">            
-                 <img class="" src="/imgs/about-me.jpg" alt="">
-                </div>
-                <div class="nav social-icons justify-content-center">
-                    <a href="#head"><i class="fa-brands fa-skype"></i></a>
-                    <a href="https://github.com/fronomenal"><i class="fa-brands fa-github"></i></a>
-                    <a href="#head"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                  
-                  <div class="info">
-                      <p>Computer Scientist</p>
-                      <h4 class="lead mt-3">Education</h4>
-                      <br>  
-                      <ul class="education-box">
-                        <li>
-                            <span class="fw-bold">2013-2016</span>
-                            <p>General Science</p>
-                            <h6>Prempeh College (High School)</h6>
-                        </li>
-                        
-                        <li>
-                            <span class="fw-bold">2016-2019</span>
-                            <p>Mechanical Engineering (Associates's)</p>
-                            <h6>KNUST</h6>
-                        </li>
-                        
-                         
-                        <li>
-                            <span class="fw-bold">2019-2023</span>
-                            <p>BSc. Computer Science</p>
-                            <h6>KNUST</h6>
-                        </li>
-                        <br><br>                                  
-                                                             
-                      </ul>
-                  </div>
-                  <div class=".info">
-                  </div>                       
+          <nav>
+            <ul class="list-unstyled">
+              <li class=""><a href="#profile" class="nav-link active" data-toggle="tooltip">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M17,3H14V6H10V3H7A2,2 0 0,0 5,5V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V5A2,2 0 0,0 17,3M12,8A2,2 0 0,1 14,10A2,2 0 0,1 12,12A2,2 0 0,1 10,10A2,2 0 0,1 12,8M16,16H8V15C8,13.67 10.67,13 12,13C13.33,13 16,13.67 16,15V16M13,5H11V1H13V5M16,19H8V18H16V19M12,21H8V20H12V21Z" />
+              </svg>
+              <span class="logo-text ms-4 lead"> Profile </span>
+              </a></li>
+              <li class=""><a href="#contact" class="nav-link " data-toggle="tooltip">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M20,0H4V2H20V0M4,24H20V22H4V24M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M12,6.75A2.25,2.25 0 0,1 14.25,9A2.25,2.25 0 0,1 12,11.25A2.25,2.25 0 0,1 9.75,9A2.25,2.25 0 0,1 12,6.75M17,17H7V15.5C7,13.83 10.33,13 12,13C13.67,13 17,13.83 17,15.5V17Z" />
+              </svg>
+              <span class="logo-text ms-4 lead"> Contact </span>
+              </a></li>
+              <li class=""><a href="#langs" class="nav-link " data-toggle="tooltip">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M15.2,20H13.8L12,13.2L10.2,20H8.8L6.6,11H8.1L9.5,17.8L11.3,11H12.6L14.4,17.8L15.8,11H17.3L15.2,20M13,9V3.5L18.5,9H13Z" />
+                </svg>
+                <span class="logo-text ms-4 lead"> Dialects </span>
+                </a>
+              </li>
+              <li class=""><a href="#skills" class="nav-link " data-toggle="tooltip">
+                <svg class="nav-icon" viewBox="0 0 640 512">
+                  <path fill="currentColor" d="M104 96h-48C42.75 96 32 106.8 32 120V224C14.33 224 0 238.3 0 256c0 17.67 14.33 32 31.1 32L32 392C32 405.3 42.75 416 56 416h48C117.3 416 128 405.3 128 392v-272C128 106.8 117.3 96 104 96zM456 32h-48C394.8 32 384 42.75 384 56V224H256V56C256 42.75 245.3 32 232 32h-48C170.8 32 160 42.75 160 56v400C160 469.3 170.8 480 184 480h48C245.3 480 256 469.3 256 456V288h128v168c0 13.25 10.75 24 24 24h48c13.25 0 24-10.75 24-24V56C480 42.75 469.3 32 456 32zM608 224V120C608 106.8 597.3 96 584 96h-48C522.8 96 512 106.8 512 120v272c0 13.25 10.75 24 24 24h48c13.25 0 24-10.75 24-24V288c17.67 0 32-14.33 32-32C640 238.3 625.7 224 608 224z"/>
+                </svg>
+                <span class="logo-text ms-4 lead"> Skill Sets </span>
+              </a></li>
+              <li class=""><a href="#port" class="nav-link " data-toggle="tooltip">
+                  <svg class="nav-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M4,2A1,1 0 0,0 3,3V4A1,1 0 0,0 4,5H5V14H11V16.59L6.79,20.79L8.21,22.21L11,19.41V22H13V19.41L15.79,22.21L17.21,20.79L13,16.59V14H19V5H20A1,1 0 0,0 21,4V3A1,1 0 0,0 20,2H4Z" />
+                </svg>
+                <span class="logo-text ms-4 lead"> Portfolio </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="theme-wrapper">
+            <input type="checkbox">
+            <span class="cycle mt-auto mb-4">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M3.55 19.09L4.96 20.5L6.76 18.71L5.34 17.29M12 6C8.69 6 6 8.69 6 12S8.69 18 12 18 18 15.31 18 12C18 8.68 15.31 6 12 6M20 13H23V11H20M17.24 18.71L19.04 20.5L20.45 19.09L18.66 17.29M20.45 5L19.04 3.6L17.24 5.39L18.66 6.81M13 1H11V4H13M6.76 5.39L4.96 3.6L3.55 5L5.34 6.81L6.76 5.39M1 13H4V11H1M13 20H11V23H13" />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <main class="ps-3">
+          <section id="home">
+            <div class="title-group text-start" id="dev-page">
+              <h1 class="display-1 pb-1">Developer Page</h1>
+              <h3>Fronomenal</h3>
+              <h4>COMPUTERPHILE | POLYGLOT</h4>
+              <p class="lead">Favorite languages C++; Golang; Python</p>
+              <p class="text-secondary">Hi there! I am King, a recent CS graduate and knowledge seeker</p>
+              <h2 class="mt-3">Welcome to my DevSite!</h2>
+              <div class="btn-bar">
+                  <a href="#head">Download CV</a>
               </div>
-              
-              <div class="col-lg-8 ml-auto">
-                  <div class="about-info">
-                      <div class="title">
-                          <h3>Biography</h3>
-                      </div>
-                      <br><br>
-                      <div class="">
-                          <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ea deleniti amet quibusdam aliquid, ipsam id iste minima! Placeat similique recusandae assumenda accusamus eius sit.
-                          </p>
-                          <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem placeat expedita impedit amet velit et consequuntur recusandae, cum, sint quidem atque totam praesentium! Veniam, ut. Omnis fuga sapiente alias.
-                          </p>
-                      </div>
-                      
-                      <div class="info-list">
-                          <div class="row">
-                              <div class="col-sm-6">
-                                  <ul>
-                                      <li>
-                                          <label>Name:</label>
-                                          <span>King McJunior</span>
-                                      </li>
-                                      
-                                      <li>
-                                          <label>Birth-month:</label>
-                                          <span>January</span>
-                                      </li>
-                                      
-                                      <li>
-                                          <label>Age:</label>
-                                          <span>21+ Years</span>
-                                      </li>
-                                      
-                                      <li>
-                                          <label>Address:</label>
-                                          <span>Aboadzie, Takoradi - Ghana</span>
-                                      </li>                                       
-                                 </ul>
-                              </div>
-                              <div class="col-sm-6">
-                                  <ul>
-                                    <li>
-                                       <label>Github:</label>
-                                       <span>fronomenal</span>
-                                    </li>
-                                    <li>
-                                     <label>Available:</label>
-                                     <span class="text-success">Yes</span>
-                                    </li>   
-                                    <li>
-                                      <label>Phone:</label>
-                                      <span>(+233) [<span class="text-warning">redacted</span>]</span>
-                                    </li>
-                                    <li>
-                                      <label>Email:</label>
-                                      <span>[<span class="text-warning">redacted</span>]@gmail.com</span>
-                                    </li>                                   
-                                 </ul>
-                              </div>
-                          </div>
-                      </div>                        
-                  </div> 
-              </div>                
-            </div>  
-          </div>
-        </section>
-        <section id="contact">
-          <h1 class="mb-5">Contact</h1>
-          <div class="container zoomIn">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="contact-info">
-                        <h4>Get In Touch</h4>
-                        <p> Currently available for freelance projects, contracts and fulltime jobs. Do well to contact me. </p>
-                        <ul>
-                           <li class="media">
-                                <i class="fa fa-envelope"></i>
-                                <span class="media-body">
-                                  [<span class="text-warning">redacted</span>]@gmail.com
-                                </span>
-                                
-                            </li>
-                               
-                             <li class="media">
-                                <i class="fa fa-phone"></i>
-                                <span class="media-phone">
-                                    +233 [<span class="text-warning">redacted</span>]
-                                </span>
-                                
-                            </li>
-                            <li class="media">
-                                <i class="fa fa-map"></i>
-                                <span class="media-body">
-                                    VRA Aboadzie Township, Takoradi - Ghana.
-                                </span>
-                                
-                            </li>
+              <img class="main-image" src="/imgs/cuslesloth.dark.png" alt="">
+            </div>
+          </section>
+          <section id="profile">
+            <h1 class="mb-5">Profile</h1>
+            <div class="container">
+              <div class="about-me mx-auto">
+                  <div class="img-container">
+                   <img class="" src="/imgs/about-me.jpg" alt="">
+                  </div>
+                  <div class="nav social-icons justify-content-center">
+                      <a href="#head"><i class="fa-brands fa-skype"></i></a>
+                      <a href="https://github.com/fronomenal"><i class="fa-brands fa-github"></i></a>
+                      <a href="#head"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+      
+                    <div class="info">
+                        <p>Computer Scientist</p>
+                        <h4 class="lead mt-3">Education</h4>
+                        <br>
+                        <ul class="education-box">
+                          <li>
+                              <span class="fw-bold">2013-2016</span>
+                              <p>General Science</p>
+                              <h6>Prempeh College (High School)</h6>
+                          </li>
+      
+                          <li>
+                              <span class="fw-bold">2016-2019</span>
+                              <p>Mechanical Engineering (Associates's)</p>
+                              <h6>KNUST</h6>
+                          </li>
+      
+      
+                          <li>
+                              <span class="fw-bold">2019-2023</span>
+                              <p>BSc. Computer Science</p>
+                              <h6>KNUST</h6>
+                          </li>
+                          <br><br>
+      
                         </ul>
                     </div>
+                    <div class=".info">
+                    </div>
                 </div>
-                
-                <div class="col-lg-7">
-                    <div class="contact-form">
-                        <h4>Send Me An Email</h4>
-                        <form id="contact-form" action="mailto:slothiusprime@gmail.com" method="get" enctype="text/plain">
+      
+                <div class="col-lg-8 ml-auto">
+                    <div class="about-info">
+                        <div class="title">
+                            <h3>Biography</h3>
+                        </div>
+                        <br><br>
+                        <div class="">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ea deleniti amet quibusdam aliquid, ipsam id iste minima! Placeat similique recusandae assumenda accusamus eius sit.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem placeat expedita impedit amet velit et consequuntur recusandae, cum, sint quidem atque totam praesentium! Veniam, ut. Omnis fuga sapiente alias.
+                            </p>
+                        </div>
+      
+                        <div class="info-list">
                             <div class="row">
-                              <div class="col-md-6">
-                                  <div class="form-group">
-                                      <input type="text" name="Name" id="name" placeholder="Name *" class="form-control">
-                                  </div>
-                              </div>
-                              
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                      <input type="email" name="Email" id="email" placeholder="Email *" class="form-control">
-                                  </div>
-                              </div>
-                              
-                                <div class="col-12">
-                                  <div class="form-group">
-                                      <input type="text" name="Subject" id="subject" placeholder="Subject *" class="form-control">
-                                  </div>
-                              </div>
-                              
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                      <textarea name="Body" id="body" placeholder="Message Body *" rows="5" class="form-control"></textarea>
-                                  </div>
-                              </div>
-                              <div class="col-md-12">
-                                  <div class="send">
-                                      <button class="btn btn-primary btn-info" type="submit" value="send">
-                                          Send message
-                                      </button>
+                                <div class="col-sm-6">
+                                    <ul>
+                                        <li>
+                                            <label>Name:</label>
+                                            <span>King McJunior</span>
+                                        </li>
+      
+                                        <li>
+                                            <label>Birth-month:</label>
+                                            <span>January</span>
+                                        </li>
+      
+                                        <li>
+                                            <label>Age:</label>
+                                            <span>21+ Years</span>
+                                        </li>
+      
+                                        <li>
+                                            <label>Address:</label>
+                                            <span>Aboadzie, Takoradi - Ghana</span>
+                                        </li>
+                                   </ul>
                                 </div>
-                              </div>
-                          </div>
-                      </form>
-                  </div>
-              </div>
-          </div>
-        </div>
-         <div class="wow zoomIn">
-             <div class="google-map container">
-                 <div class="btm-border"></div>
-                  <iframe class="embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.7540571713876!2d-1.6591524842327543!3d4.980486396384477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfe763fe215aad7f%3A0x65b99b0149e5a9d9!2sVRA%20Aboadze%20Township!5e0!3m2!1sen!2sin!4v1678581117050!5m2!1sen!2sin" width="450" height="330" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
-             </div>
-         </div>
-        <br><br><br>
-
-        </section>
-        <section id="langs">
-          <h1>Languages</h1>
-          <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Ordered by Frequency of Use</h2>
-                    <p class="subtitle"> Ascending</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="languages">
-                        
-                      <div class="lang twelve">
-                         <img src="imgs/FSharp.png" alt="">
-                         <div class="Hover">
-                             <a href="imgs/FSharp.png" class="prePhoto" data-rel="prettyPhoto">
-                                 <i class="fa-solid fa-expand"></i>
-                             </a>
-                             <a href="" class="details" data-lang="F Sharp">
-                                 <i class="fa-solid fa-language"></i>
-                             </a>
-                         </div>
-                     </div>
-                     
-                     
-                      <div class="lang eleven">
-                         <img src="imgs/Kotlin.png" alt="">
-                         <div class="Hover">
-                             <a href="imgs/Kotlin.png" class="prePhoto" data-rel="prettyPhoto">
-                                 <i class="fa-solid fa-expand"></i>
-                             </a>
-                             <a href="" class="details" data-lang="Kotlin">
-                                 <i class="fa-solid fa-language"></i>
-                             </a>
-                         </div>
-                     </div> 
-
-
-                        <div class="lang ten">
-                            <img src="imgs/Dart.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/Dart.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="Dart">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
+                                <div class="col-sm-6">
+                                    <ul>
+                                      <li>
+                                         <label>Github:</label>
+                                         <span>fronomenal</span>
+                                      </li>
+                                      <li>
+                                       <label>Available:</label>
+                                       <span class="text-success">Yes</span>
+                                      </li>
+                                      <li>
+                                        <label>Phone:</label>
+                                        <span>(+233) [<span class="text-warning">redacted</span>]</span>
+                                      </li>
+                                      <li>
+                                        <label>Email:</label>
+                                        <span>[<span class="text-warning">redacted</span>]@gmail.com</span>
+                                      </li>
+                                   </ul>
+                                </div>
                             </div>
                         </div>
-                     
-
-                        <div class="clearfix"></div>   
-
-                        
-                        <div class="lang nine">
-                            <img src="imgs/Java.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/Java.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="Java">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                         
-                        <div class="lang eight">
-                            <img src="imgs/Elixir.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/Elixir.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="Elixir">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
-                            </div>
-                        </div>
-                         
-                         
-                        <div class="lang seven">
-                            <img src="imgs/Rust.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/Rust.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="Rust">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                         
-                        <div class="lang six">
-                            <img src="imgs/CPP.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/CPP.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="C/C++">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        
-                        <div class="clearfix"></div>
-
-                        
-                         <div class="lang five">
-                            <img src="imgs/CSharp.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/CSharp.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="C Sharp">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                         
-                         <div class="lang four">
-                            <img src="imgs/GoLang.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/GoLang.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="GoLang">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                         <div class="lang three">
-                            <img src="imgs/PHP.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/PHP.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="PHP">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        
-                        <div class="clearfix"></div>
-                        
-                        
-                         <div class="lang two">
-                            <img src="imgs/Python.png" alt="">
-                            <div class="Hover">
-                                <a href="imgs/Python.png" class="prePhoto" data-rel="prettyPhoto">
-                                    <i class="fa-solid fa-expand"></i>
-                                </a>
-                                <a href="" class="details" data-lang="Python">
-                                    <i class="fa-solid fa-language"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="lang one">
-                          <img src="imgs/JavaScript.png" alt="">
-                          <div class="Hover">
-                              <a href="imgs/JavaScript.png" class="prePhoto" data-rel="prettyPhoto">
-                                  <i class="fa-solid fa-expand"></i>
-                              </a>
-                              <a href="" class="details" data-lang="JavaScript/TypeScript">
-                                  <i class="fa-solid fa-language"></i>
-                              </a>
-                          </div>
-                      </div>
-                        
-                   <div class="clearfix"></div>
-                        
-                        
-                   <div class="lang order">
-                     <img src="svgs/lang_order_dark.svg" alt="">
                     </div>
-                      
-                    <div class="mob">
-                      <div class="cus-box">
-                          <div class="frequency-box">
-                              <span>Most Used</span>
-                          </div>
-                      </div>
-                    </div>    
-                   
-                    <div class="lang-proficiency">
-                      <h4 id="lang_name"><!-- Dynamic content here --></h4>
-                      <p>Mastery</p>
-                      <div class="pf-progress" data-progress="0"></div>
-                      <div class="pf-level mt-1"><!-- Dynamic content here --></div>
-                    </div>
-                    
-                  </div>  
-                    
-                    
-                </div>
-            </div>              
-        </div>
-          <section id="lang-details-lighbox">
-            <div class="modal lightbox-modal" id="lightbox-modal" tabindex="-1">
-              <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content">
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                  <div class="modal-body">
-                    <div class="container-fluid p-0">
-                      <!-- Dynamic content here -->
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </section>
-          
-        </section>
-        <section id="skills">
-          <h1>Marketable Skills</h1>
-          <div class="skills-container d-flex flex-lg-row flex-column flex-wrap justify-content-center">
-            <div class="row border-2 border-secondary rounded mb-3 mx-auto">
-              <div class="image-container col-12 col-sm-6">
-                <h3>Web App Development</h3>
-                <img src="svgs/web_dark.svg" alt="Web Development SVG" id="web-image">
-              </div>
-              <div class="col-12 col-md-auto bullets">
-                <ul>
-                  <li>HTML/CSS</li>
-                  <li>SASS</li>
-                  <li>Bootstrap</li>
-                  <li>TailwindCSS</li>
-                </ul>
-                <ul>
-                  <li>Svelte</li>
-                  <li>Vue</li>
-                  <li>Angular</li>
-                  <li>React</li>
-                </ul>
-                <ul>
-                  <li>Jquery</li>
-                  <li>AlpineJS</li>
-                  <li>HTMX</li>
-                  <li>ApolloClient</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row border-2 border-secondary rounded mb-3 mx-auto">
-              <div class="image-container col-12 col-sm-6">
-                <h3>Full Stack Development</h3>
-                <img src="svgs/full_dark.svg" alt="Web Development SVG" id="web-image">
-              </div>
-              <div class="col-12 col-md-auto bullets">
-                <ul>
-                  <li>NUXTjs 3</li>
-                  <li>NEXTjs 13</li>
-                  <li>InertiaJS</li>
-                  <li>Tauri</li>
-                </ul>
-                <ul>
-                  <li>Laravel (Blade)</li>
-                  <li>Flask (Jinja)</li>
-                  <li>ASP.NET (Blazor)</li>
-                  <li>Pheonix (Liveview)</li>
-                </ul>
-                <ul>
-                  <p class="text-center mb-0">APIs</p>
-                  <li>Gin | Echo | Fiber</li>
-                  <li>Flask | FastAPI</li>
-                  <li>Express</li>
-                  <li>API Platform</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row border-2 border-secondary rounded mb-3 mx-auto">
-              <div class="image-container col-12 col-sm-6">
-                <h3>Back End Technologies</h3>
-                <img src="svgs/server_dark.svg" alt="Web Development SVG" id="web-image">
-              </div>
-              <div class="col-12 col-md-auto bullets">
-                <ul>
-                  <li>REST</li>
-                  <li>GRPC</li>
-                  <li>GraphQL</li>
-                </ul>
-                <ul>
-                  <li>Docker</li>
-                  <li>Kubernetes</li>
-                  <li>Microservices</li>
-                </ul>
-                <ul>
-                  <li>MySQL</li>
-                  <li>PostgreSQL</li>
-                  <li>SQLite</li>
-                </ul>
-                <ul>
-                  <li>MongoDB</li>
-                  <li>Redis</li>
-                  <li>ElasticSearch</li>
-                  <li>RabbitMQ</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row border-2 border-secondary rounded mb-3 mx-auto">
-              <div class="image-container col-12 col-sm-6">
-                <h3>Native Mobile Development</h3>
-                <img src="svgs/mobile_dev_dark.svg" alt="Web Development SVG" id="web-image">
-              </div>
-              <div class="col-12 col-md-auto bullets">
-                <ul>
-                  <li>Flutter</li>
-                  <li>Jetpack Compose</li>
-                  <li>Vanilla Java</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row border-2 border-secondary rounded mb-3 mx-auto">
-              <div class="image-container col-12 col-sm-6">
-                <h3>Native Desktop Development</h3>
-                <img src="svgs/desktop_dev_dark.svg" alt="Web Development SVG" id="web-image">
-              </div>
-              <div class="col-12 col-md-auto bullets">
-                <ul>
-                  <li>Qt</li>
-                  <li>WxWidgets</li>
-                </ul>
-                <ul>
-                  <li>WPF</li>
-                  <li>WinForms</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row border-2 border-secondary rounded mb-3 mx-auto">
-              <div class="image-container col-12 col-sm-6">
-                <h3>Systems Programming</h3>
-                <img src="svgs/systems_prog_dark.svg" alt="Web Development SVG" id="web-image">
-              </div>
-              <div class="col-12 col-md-auto bullets">
-                <ul>
-                  <li>Rust</li>
-                  <li>C/C++</li>
-                </ul>
-                <ul>
-                  <li>Linux Kernel</li>
-                  <li>Win32 API</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section id="port">
-          <h1 class="mt-5">Portfolio</h1>
-            <div class="separated"></div>
-              <div class="title">
-                <h3>What Can I Build?</h3>
-                <p class="lead">A Selection of 3 programs I've built under these categories</p>
-                <a class="lead mt-5" href="">More on Github</a>
-              </div>
-              <br><br><br>
-            <div class="row">
-            
-              <div class="col-lg-4 wow bounceInLeft">
-                <div class="box1 mb-5 mb-lg-0">
-                    <i class="icon fa fa-laptop"></i>
-                    <div class="content">
-                        <br>
-                        <h5>APPs</h5>
-                        <p class="mb-5">
-                            Fullstack applications that cover the whole software engineering stack, connecting presentation with backend Logic.<br> Frontend frameworks and other UI library code I've written can be found here; some are bundled with external web API programs.
-                        </p>
-
-                        <a href="" target="_blank">
-                          <div class="port_card mt-3">
-                            <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
-                          </div>
-                        </a>
-
-                        <a href="" target="_blank">
-                          <div class="port_card mt-3">
-                            <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
-                          </div>
-                        </a>
-
-                        <a href="" target="_blank">
-                          <div class="port_card mt-3">
-                            <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
-                          </div>
-                        </a>
-
+          <section id="contact">
+            <h1 class="mb-5">Contact</h1>
+            <div class="container zoomIn">
+              <div class="row">
+                  <div class="col-lg-5">
+                      <div class="contact-info">
+                          <h4>Get In Touch</h4>
+                          <p> Currently available for freelance projects, contracts and fulltime jobs. Do well to contact me. </p>
+                          <ul>
+                             <li class="media">
+                                  <i class="fa fa-envelope"></i>
+                                  <span class="media-body">
+                                    [<span class="text-warning">redacted</span>]@gmail.com
+                                  </span>
+      
+                              </li>
+      
+                               <li class="media">
+                                  <i class="fa fa-phone"></i>
+                                  <span class="media-phone">
+                                      +233 [<span class="text-warning">redacted</span>]
+                                  </span>
+      
+                              </li>
+                              <li class="media">
+                                  <i class="fa fa-map"></i>
+                                  <span class="media-body">
+                                      VRA Aboadzie Township, Takoradi - Ghana.
+                                  </span>
+      
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+      
+                  <div class="col-lg-7">
+                      <div class="contact-form">
+                          <h4>Send Me An Email</h4>
+                          <form id="contact-form" action="mailto:slothiusprime@gmail.com" method="get" enctype="text/plain">
+                              <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="Name" id="name" placeholder="Name *" class="form-control">
+                                    </div>
+                                </div>
+      
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" name="Email" id="email" placeholder="Email *" class="form-control">
+                                    </div>
+                                </div>
+      
+                                  <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" name="Subject" id="subject" placeholder="Subject *" class="form-control">
+                                    </div>
+                                </div>
+      
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="Body" id="body" placeholder="Message Body *" rows="5" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="send">
+                                        <button class="btn btn-primary btn-info" type="submit" value="send">
+                                            Send message
+                                        </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
+            </div>
+          </div>
+           <div class="wow zoomIn">
+               <div class="google-map container">
+                   <div class="btm-border"></div>
+                    <iframe class="embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.7540571713876!2d-1.6591524842327543!3d4.980486396384477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfe763fe215aad7f%3A0x65b99b0149e5a9d9!2sVRA%20Aboadze%20Township!5e0!3m2!1sen!2sin!4v1678581117050!5m2!1sen!2sin" width="450" height="330" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+               </div>
+           </div>
+          <br><br><br>
+          </section>
+          <section id="langs">
+            <h1>Languages</h1>
+            <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2>Ordered by Frequency of Use</h2>
+                      <p class="subtitle"> Ascending</p>
+                  </div>
               </div>
-
-              <div class="col-lg-4 wow bounceInUp">
-                <div class="box1 mb-5 mb-lg-0">
-                  <i class="icon fa fa-server"></i>
-                  <div class="content">
-                      <br>
-                      <h5>APIs</h5>
-                      <p class="mb-5">
-                          Web API systems built as standalone resources without any frontends consuming them.<br> They include various languages with varying achitectural and design patters.
-                      </p>
-
-                      <a href="" target="_blank">
-                        <div class="port_card mt-3">
-                          <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="languages">
+      
+                        <div class="lang twelve">
+                           <img src="imgs/FSharp.png" alt="">
+                           <div class="Hover">
+                               <a href="imgs/FSharp.png" class="prePhoto" data-rel="prettyPhoto">
+                                   <i class="fa-solid fa-expand"></i>
+                               </a>
+                               <a href="" class="details" data-lang="F Sharp">
+                                   <i class="fa-solid fa-language"></i>
+                               </a>
+                           </div>
+                       </div>
+      
+      
+                        <div class="lang eleven">
+                           <img src="imgs/Kotlin.png" alt="">
+                           <div class="Hover">
+                               <a href="imgs/Kotlin.png" class="prePhoto" data-rel="prettyPhoto">
+                                   <i class="fa-solid fa-expand"></i>
+                               </a>
+                               <a href="" class="details" data-lang="Kotlin">
+                                   <i class="fa-solid fa-language"></i>
+                               </a>
+                           </div>
+                       </div>
+                          <div class="lang ten">
+                              <img src="imgs/Dart.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/Dart.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="Dart">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+                          <div class="clearfix"></div>
+      
+                          <div class="lang nine">
+                              <img src="imgs/Java.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/Java.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="Java">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+      
+                          <div class="lang eight">
+                              <img src="imgs/Elixir.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/Elixir.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="Elixir">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+      
+                          <div class="lang seven">
+                              <img src="imgs/Rust.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/Rust.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="Rust">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+                          <div class="lang six">
+                              <img src="imgs/CPP.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/CPP.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="C/C++">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+                          <div class="clearfix"></div>
+      
+                           <div class="lang five">
+                              <img src="imgs/CSharp.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/CSharp.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="C Sharp">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+      
+                           <div class="lang four">
+                              <img src="imgs/GoLang.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/GoLang.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="GoLang">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+                           <div class="lang three">
+                              <img src="imgs/PHP.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/PHP.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="PHP">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+                          <div class="clearfix"></div>
+      
+      
+                           <div class="lang two">
+                              <img src="imgs/Python.png" alt="">
+                              <div class="Hover">
+                                  <a href="imgs/Python.png" class="prePhoto" data-rel="prettyPhoto">
+                                      <i class="fa-solid fa-expand"></i>
+                                  </a>
+                                  <a href="" class="details" data-lang="Python">
+                                      <i class="fa-solid fa-language"></i>
+                                  </a>
+                              </div>
+                          </div>
+      
+      
+                          <div class="lang one">
+                            <img src="imgs/JavaScript.png" alt="">
+                            <div class="Hover">
+                                <a href="imgs/JavaScript.png" class="prePhoto" data-rel="prettyPhoto">
+                                    <i class="fa-solid fa-expand"></i>
+                                </a>
+                                <a href="" class="details" data-lang="JavaScript/TypeScript">
+                                    <i class="fa-solid fa-language"></i>
+                                </a>
+                            </div>
                         </div>
-                      </a>
-
-                      <a href="" target="_blank">
-                        <div class="port_card mt-3">
-                          <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
+      
+                     <div class="clearfix"></div>
+      
+      
+                     <div class="lang order">
+                       <img src="svgs/lang_order_dark.svg" alt="">
+                      </div>
+      
+                      <div class="mob">
+                        <div class="cus-box">
+                            <div class="frequency-box">
+                                <span>Most Used</span>
+                            </div>
                         </div>
-                      </a>
-
-                      <a href="" target="_blank">
-                        <div class="port_card mt-3">
-                          <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
-                        </div>
-                      </a>
+                      </div>
+      
+                      <div class="lang-proficiency">
+                        <h4 id="lang_name"><!-- Dynamic content here --></h4>
+                        <p>Mastery</p>
+                        <div class="pf-progress" data-progress="0"></div>
+                        <div class="pf-level mt-1"><!-- Dynamic content here --></div>
+                      </div>
+      
+                    </div>
+      
+      
+                  </div>
+              </div>
+          </div>
+            <section id="lang-details-lighbox">
+              <div class="modal lightbox-modal" id="lightbox-modal" tabindex="-1">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                      <div class="container-fluid p-0">
+                        <!-- Dynamic content here -->
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            
-             <div class="col-lg-4 wow bounceInRight">
-                <div class="box1 mb-5 mb-lg-0">
-                    <i class="icon fa fa-microchip"></i>
+            </section>
+      
+          </section>
+          <section id="skills">
+            <h1>Marketable Skills</h1>
+            <div class="skills-container d-flex flex-lg-row flex-column flex-wrap justify-content-center">
+              <div class="row border-2 border-secondary rounded mb-3 mx-auto">
+                <div class="image-container col-12 col-sm-6">
+                  <h3>Web App Development</h3>
+                  <img src="svgs/web_dark.svg" alt="Web Development SVG" id="web-image">
+                </div>
+                <div class="col-12 col-md-auto bullets">
+                  <ul>
+                    <li>HTML/CSS</li>
+                    <li>SASS</li>
+                    <li>Bootstrap</li>
+                    <li>TailwindCSS</li>
+                  </ul>
+                  <ul>
+                    <li>Svelte</li>
+                    <li>Vue</li>
+                    <li>Angular</li>
+                    <li>React</li>
+                  </ul>
+                  <ul>
+                    <li>Jquery</li>
+                    <li>AlpineJS</li>
+                    <li>HTMX</li>
+                    <li>ApolloClient</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row border-2 border-secondary rounded mb-3 mx-auto">
+                <div class="image-container col-12 col-sm-6">
+                  <h3>Full Stack Development</h3>
+                  <img src="svgs/full_dark.svg" alt="Web Development SVG" id="web-image">
+                </div>
+                <div class="col-12 col-md-auto bullets">
+                  <ul>
+                    <li>NUXTjs 3</li>
+                    <li>NEXTjs 13</li>
+                    <li>InertiaJS</li>
+                    <li>Tauri</li>
+                  </ul>
+                  <ul>
+                    <li>Laravel (Blade)</li>
+                    <li>Flask (Jinja)</li>
+                    <li>ASP.NET (Blazor)</li>
+                    <li>Pheonix (Liveview)</li>
+                  </ul>
+                  <ul>
+                    <p class="text-center mb-0">APIs</p>
+                    <li>Gin | Echo | Fiber</li>
+                    <li>Flask | FastAPI</li>
+                    <li>Express</li>
+                    <li>API Platform</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row border-2 border-secondary rounded mb-3 mx-auto">
+                <div class="image-container col-12 col-sm-6">
+                  <h3>Back End Technologies</h3>
+                  <img src="svgs/server_dark.svg" alt="Web Development SVG" id="web-image">
+                </div>
+                <div class="col-12 col-md-auto bullets">
+                  <ul>
+                    <li>REST</li>
+                    <li>GRPC</li>
+                    <li>GraphQL</li>
+                  </ul>
+                  <ul>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Microservices</li>
+                  </ul>
+                  <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>SQLite</li>
+                  </ul>
+                  <ul>
+                    <li>MongoDB</li>
+                    <li>Redis</li>
+                    <li>ElasticSearch</li>
+                    <li>RabbitMQ</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row border-2 border-secondary rounded mb-3 mx-auto">
+                <div class="image-container col-12 col-sm-6">
+                  <h3>Native Mobile Development</h3>
+                  <img src="svgs/mobile_dev_dark.svg" alt="Web Development SVG" id="web-image">
+                </div>
+                <div class="col-12 col-md-auto bullets">
+                  <ul>
+                    <li>Flutter</li>
+                    <li>Jetpack Compose</li>
+                    <li>Vanilla Java</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row border-2 border-secondary rounded mb-3 mx-auto">
+                <div class="image-container col-12 col-sm-6">
+                  <h3>Native Desktop Development</h3>
+                  <img src="svgs/desktop_dev_dark.svg" alt="Web Development SVG" id="web-image">
+                </div>
+                <div class="col-12 col-md-auto bullets">
+                  <ul>
+                    <li>Qt</li>
+                    <li>WxWidgets</li>
+                  </ul>
+                  <ul>
+                    <li>WPF</li>
+                    <li>WinForms</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row border-2 border-secondary rounded mb-3 mx-auto">
+                <div class="image-container col-12 col-sm-6">
+                  <h3>Systems Programming</h3>
+                  <img src="svgs/systems_prog_dark.svg" alt="Web Development SVG" id="web-image">
+                </div>
+                <div class="col-12 col-md-auto bullets">
+                  <ul>
+                    <li>Rust</li>
+                    <li>C/C++</li>
+                  </ul>
+                  <ul>
+                    <li>Linux Kernel</li>
+                    <li>Win32 API</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <section id="port">
+            <h1 class="mt-5">Portfolio</h1>
+              <div class="separated"></div>
+                <div class="title">
+                  <h3>What Can I Build?</h3>
+                  <p class="lead">A Selection of 3 programs I've built under these categories</p>
+                  <a class="lead mt-5" href="">More on Github</a>
+                </div>
+                <br><br><br>
+              <div class="row">
+      
+                <div class="col-lg-4 wow bounceInLeft">
+                  <div class="box1 mb-5 mb-lg-0">
+                      <i class="icon fa fa-laptop"></i>
+                      <div class="content">
+                          <br>
+                          <h5>APPs</h5>
+                          <p class="mb-5">
+                              Fullstack applications that cover the whole software engineering stack, connecting presentation with backend Logic.<br> Frontend frameworks and other UI library code I've written can be found here; some are bundled with external web API programs.
+                          </p>
+                          <a href="" target="_blank">
+                            <div class="port_card mt-3">
+                              <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
+                            </div>
+                          </a>
+                          <a href="" target="_blank">
+                            <div class="port_card mt-3">
+                              <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
+                            </div>
+                          </a>
+                          <a href="" target="_blank">
+                            <div class="port_card mt-3">
+                              <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
+                            </div>
+                          </a>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 wow bounceInUp">
+                  <div class="box1 mb-5 mb-lg-0">
+                    <i class="icon fa fa-server"></i>
                     <div class="content">
                         <br>
-                        <h5>Others</h5>
+                        <h5>APIs</h5>
                         <p class="mb-5">
-                            Programs that are neither web APIs nor applications.<br> Includes scripts or modules I've worked on.
+                            Web API systems built as standalone resources without any frontends consuming them.<br> They include various languages with varying achitectural and design patters.
                         </p>
-
                         <a href="" target="_blank">
                           <div class="port_card mt-3">
                             <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
                           </div>
                         </a>
-
                         <a href="" target="_blank">
                           <div class="port_card mt-3">
                             <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
                           </div>
                         </a>
-
                         <a href="" target="_blank">
                           <div class="port_card mt-3">
                             <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
                           </div>
                         </a>
-
                     </div>
+                  </div>
+                </div>
+      
+               <div class="col-lg-4 wow bounceInRight">
+                  <div class="box1 mb-5 mb-lg-0">
+                      <i class="icon fa fa-microchip"></i>
+                      <div class="content">
+                          <br>
+                          <h5>Others</h5>
+                          <p class="mb-5">
+                              Programs that are neither web APIs nor applications.<br> Includes scripts or modules I've worked on.
+                          </p>
+                          <a href="" target="_blank">
+                            <div class="port_card mt-3">
+                              <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
+                            </div>
+                          </a>
+                          <a href="" target="_blank">
+                            <div class="port_card mt-3">
+                              <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
+                            </div>
+                          </a>
+                          <a href="" target="_blank">
+                            <div class="port_card mt-3">
+                              <span class="port_lang">C++</span> | <span class="lead">Application Name</span>
+                            </div>
+                          </a>
+                      </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <br><br>
-            <div class="container">
-              <div class="separated"></div>
-              <div id="work-tools" class="wow zoomIn">
-                <br><br>
-                <div id="wrap">
-                    <div class="wrapper">
-                        <div class="topbar">
-                            <span class="back" id="close" >&larr;</span>
-                            <h3 class="mb-5 mb-lg-auto" id="work-s-target">Programs By Tools Used</h3><h4 class="" id="pile-name"></h4>
-                        </div>
-                        <ul id="tp-grid" class="tp-grid">
-                          <li data-pile="HTML/CSS">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                            
-                            
-                          <!-- Another Set -->
-                          
-                          <li data-pile="JS/HTML/CSS,HTML/CSS">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na2.png" alt="">
-                              </a>
-                          </li>
-                          
-                           
-                          <li data-pile="JS/HTML/CSS,HTML/CSS">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na1.png" alt="">
-                              </a>
-                          </li>
-                          
-                           
-                          <li data-pile="JS/HTML/CSS,HTML/CSS">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na1.png" alt="">
-                              </a>
-                          </li>
-                          
-                          <!-- Another Set -->
-
-
-                          <li data-pile="JavaScript(ReactJS)">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na2.png" alt="">
-                              </a>
-                          </li>
-                            
-                          <li data-pile="JavaScript(ReactJS)">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                          <!-- Another Set -->
-
-
-                            <li data-pile="JavaScript(VueJS)">
+              <br><br>
+              <div class="container">
+                <div class="separated"></div>
+                <div id="work-tools" class="wow zoomIn">
+                  <br><br>
+                  <div id="wrap">
+                      <div class="wrapper">
+                          <div class="topbar">
+                              <span class="back" id="close" >&larr;</span>
+                              <h3 class="mb-5 mb-lg-auto" id="work-s-target">Programs By Tools Used</h3><h4 class="" id="pile-name"></h4>
+                          </div>
+                          <ul id="tp-grid" class="tp-grid">
+                            <li data-pile="HTML/CSS">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+      
+                            <!-- Another Set -->
+      
+                            <li data-pile="JS/HTML/CSS,HTML/CSS">
                                 <a href="" target="_blank">
                                     <span class="tp-info">
                                         <span>Name</span>
@@ -852,8 +783,29 @@
                                     <img src="imgs/tools_na2.png" alt="">
                                 </a>
                             </li>
-                            
-                            <li data-pile="JavaScript(VueJS)">
+      
+      
+                            <li data-pile="JS/HTML/CSS,HTML/CSS">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na1.png" alt="">
+                                </a>
+                            </li>
+      
+      
+                            <li data-pile="JS/HTML/CSS,HTML/CSS">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na1.png" alt="">
+                                </a>
+                            </li>
+      
+                            <!-- Another Set -->
+                            <li data-pile="JavaScript(ReactJS)">
                                 <a href="" target="_blank">
                                     <span class="tp-info">
                                         <span>Name</span>
@@ -861,213 +813,243 @@
                                     <img src="imgs/tools_na2.png" alt="">
                                 </a>
                             </li>
-                          
-                            
-                          <li data-pile="JavaScript(NodeJS)">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na2.png" alt="">
-                              </a>
-                          </li>
-                          
-                            
-                          <li data-pile="JavaScript(NodeJS)">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na2.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                          <!-- Another Set -->
-                          
-                                  
-                          <li data-pile="Python">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na2.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                          
+      
+                            <li data-pile="JavaScript(ReactJS)">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+      
+                            <!-- Another Set -->
+                              <li data-pile="JavaScript(VueJS)">
+                                  <a href="" target="_blank">
+                                      <span class="tp-info">
+                                          <span>Name</span>
+                                      </span>
+                                      <img src="imgs/tools_na2.png" alt="">
+                                  </a>
+                              </li>
+      
+                              <li data-pile="JavaScript(VueJS)">
+                                  <a href="" target="_blank">
+                                      <span class="tp-info">
+                                          <span>Name</span>
+                                      </span>
+                                      <img src="imgs/tools_na2.png" alt="">
+                                  </a>
+                              </li>
+      
+      
+                            <li data-pile="JavaScript(NodeJS)">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na2.png" alt="">
+                                </a>
+                            </li>
+      
+      
+                            <li data-pile="JavaScript(NodeJS)">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na2.png" alt="">
+                                </a>
+                            </li>
+      
+      
+                            <!-- Another Set -->
+      
+      
                             <li data-pile="Python">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na2.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                          
-                          
-                            <li data-pile="Python">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na2.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                          
-                            <li data-pile="Python">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na1.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                            
-                            <li data-pile="Python">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na1.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na2.png" alt="">
+                                </a>
+                            </li>
+      
+      
+      
                               <li data-pile="Python">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na1.png" alt="">
-                              </a>
-                          </li>
-                          
-                          <!-- Another Set -->
-                          
-                                  
-                          <li data-pile="PHP">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na2.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                          
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na2.png" alt="">
+                                </a>
+                            </li>
+      
+      
+      
+      
+                              <li data-pile="Python">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na2.png" alt="">
+                                </a>
+                            </li>
+      
+      
+      
+                              <li data-pile="Python">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na1.png" alt="">
+                                </a>
+                            </li>
+      
+      
+      
+                              <li data-pile="Python">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na1.png" alt="">
+                                </a>
+                            </li>
+      
+      
+                                <li data-pile="Python">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na1.png" alt="">
+                                </a>
+                            </li>
+      
+                            <!-- Another Set -->
+      
+      
                             <li data-pile="PHP">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na1.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                          
-                          <li data-pile="PHP">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                          
-                          <!-- Another Set -->
-                          
-                          
-                          
-                          <li data-pile="Golang">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                          
-                          
-                            
-                          <li data-pile="Golang">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                          
-                          <!-- Another Set -->
-                          
-                          
-                          <li data-pile="Elixir">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                          
-                          <!-- Another Set -->
-                          
-                          
-                          
-                            <li data-pile="C Sharp">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                          
-                          <!-- Another Set -->
-                          
-                            
-                            <li data-pile="CPP">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                          
-                          <!-- Another Set -->
-                          
-                          
-                          <li data-pile="Java">
-                              <a href="" target="_blank">
-                                  <span class="tp-info">
-                                      <span>Name</span>
-                                  </span>
-                                  <img src="imgs/tools_na3.png" alt="">
-                              </a>
-                          </li>
-                            
-                        </ul>
-                    </div>
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na2.png" alt="">
+                                </a>
+                            </li>
+      
+      
+      
+                              <li data-pile="PHP">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na1.png" alt="">
+                                </a>
+                            </li>
+      
+      
+      
+                            <li data-pile="PHP">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+                            <!-- Another Set -->
+      
+      
+      
+                            <li data-pile="Golang">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+      
+      
+                            <li data-pile="Golang">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+                            <!-- Another Set -->
+      
+      
+                            <li data-pile="Elixir">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+                            <!-- Another Set -->
+      
+      
+      
+                              <li data-pile="C Sharp">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+                            <!-- Another Set -->
+      
+      
+                              <li data-pile="CPP">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+                            <!-- Another Set -->
+      
+      
+                            <li data-pile="Java">
+                                <a href="" target="_blank">
+                                    <span class="tp-info">
+                                        <span>Name</span>
+                                    </span>
+                                    <img src="imgs/tools_na3.png" alt="">
+                                </a>
+                            </li>
+      
+                          </ul>
+                      </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="separated"></div>
-        </section>
-      </main>
-      <div>
-        <img id="recline" src="/imgs/slorec.dark.png" alt="" data-scrollto="#work-s-target">
-        <img  id="float" src="/imgs/cuslo.png" alt="">
+              <div class="separated"></div>
+          </section>
+        </main>
+        <div>
+          <img id="recline" src="/imgs/slorec.dark.png" alt="" data-scrollto="#work-s-target">
+          <img  id="float" src="/imgs/cuslo.png" alt="">
+        </div>
       </div>
     </div>
   </body>

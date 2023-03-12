@@ -1070,11 +1070,6 @@
                                 transition-delay: 150ms;
                             }
 
-                            .no-js .tp-grid li {
-                                position: relative;
-                                display: inline-block;
-                            }
-
                         }
                     }
                 }
@@ -1126,4 +1121,9 @@
         }
     }
     
+}
+
+.no-js .tp-grid li {
+    position: relative;
+    display: inline-block;
 }

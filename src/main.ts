@@ -1,6 +1,7 @@
 import './styles/style.scss'
 
 import './modules/codrops.stapel.custom.js'
+import './modules/Loader';
 import ThemeToggler from './modules/ThemeToggler';
 import ToolsGrid from './modules/ToolsGrid';
 import LangBox from './modules/LangBox';
