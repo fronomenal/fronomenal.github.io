@@ -99,7 +99,7 @@
                     }
 
                     @include max(){
-                        width: 500px;
+                        width: 75vw;
                         margin-inline: 18%;
                     }
                 }
@@ -926,13 +926,13 @@
                     #wrap{
                         width: 100%;
                         max-width: 1420px;
-                        margin: 0 auto;
+                        margin-inline: auto;
                         padding: 0 50px;
                         
                         .wrapper {
                             position: relative;
                             padding: 0 0 50px 0;
-                            margin: 0 auto;
+                            margin-inline: auto;
 
                             & img{
                                 width: 320px;
@@ -947,7 +947,6 @@
 
                             .topbar {
                                 position: relative;
-                                padding: 20px 0;
                                 margin: 0 0 40px;
 
                                 .back {
@@ -1009,6 +1008,10 @@
                                     & img {
                                         display: block;
                                         border: none;
+                                    }
+
+                                    @include max(){
+                                        margin-left: -6%;
                                     }
                                 }
 
