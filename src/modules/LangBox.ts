@@ -1,4 +1,5 @@
 import jQuery from "jquery";
+// @ts-ignore
 import CircleProgress from "js-circle-progress";
 
 const languageProficiency = new Map<string, number>();

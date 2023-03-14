@@ -27,19 +27,18 @@ export default class ThemeToggler
         onAfterOpen :  () => this.close.show()
       });
 
-      let recimg = jQuery('#recline');
-      if (recimg){
-        this.smoothScroll = new ScrollToSmooth(recimg, {
-          targetAttribute: 'data-scrollto',
-          duration: 400,
-          durationRelative: false,
-          durationMin: false,
-          durationMax: false,
-          easing: easeOutCubic,
-          offset: null
-        });
-        this.smoothScroll.init();
-      }}
+        // @ts-ignore
+      this.smoothScroll = new ScrollToSmooth("#recline", {
+        targetAttribute: 'data-scrollto',
+        duration: 400,
+        durationRelative: false,
+        durationMin: false,
+        durationMax: false,
+        easing: easeOutCubic,
+        offset: null
+      });
+      this.smoothScroll.init();
+    }
 
     public registerEvents(){
       this.close.click(this.toggleAction.bind(this));
