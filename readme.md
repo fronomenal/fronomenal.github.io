@@ -18,13 +18,11 @@ Project is created with:
 Project uses the following packages: 
 * Bootsrap
 * FontAwesome
-* 
-* js-circle-progress
 * mordenizr
 * stapel
-* scrolltosmooth
-* prettyPhoto
 * wow
+* js-circle-progress
+* scrolltosmooth
 
 ## Preview
 Live preview available on: [Github](https://fronomenal.github.io/)
