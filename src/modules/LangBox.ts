@@ -68,9 +68,10 @@ export default class LangBox
       if (proficiency) {
         this.langProf.find('.pf-progress').data("progress", proficiency);
 
-        if (proficiency >= 90) this.langProf.find('.pf-level').html("Proficiency: <span>Senior</span>")
+        if (proficiency >= 90) this.langProf.find('.pf-level').html("Proficiency: <span>Expert</span>")
+        else if (proficiency >= 75) this.langProf.find('.pf-level').html("Proficiency: <span>Advanced</span>")
         else if (proficiency >= 65) this.langProf.find('.pf-level').html("Proficiency: <span>Intermediate</span>")
-        else this.langProf.find('.pf-level').html("Proficiency: <span>Junior</span>");
+        else this.langProf.find('.pf-level').html("Proficiency: <span>Experienced</span>");
 
         this.circProg.value = proficiency;
       }
