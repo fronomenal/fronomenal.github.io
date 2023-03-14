@@ -5,6 +5,6 @@ export default defineConfig({
   clearScreen: false,
   root: "./src",
   build: {
-    outDir: "docs"
+    outDir: "../docs"
   }
 });
