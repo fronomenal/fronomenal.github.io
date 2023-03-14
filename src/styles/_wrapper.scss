@@ -1115,9 +1115,9 @@
 
                                 .tp-info, .tp-title {
                                     position: absolute;
-                                    background: #ffffff;
+                                    background: var(--background);
                                     line-height: 20px;
-                                    color: black;
+                                    color: var(--on-bg-alt);
                                     font-style: italic;
                                     font-size: 22px; 
                                     line-height: 26px;
