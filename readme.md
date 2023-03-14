@@ -20,9 +20,9 @@ Project uses the following packages:
 * FontAwesome
 * mordenizr
 * stapel
-* wow
 * js-circle-progress
 * scrolltosmooth
+* wow
 
 ## Preview
 Live preview available on: [Github](https://fronomenal.github.io/)

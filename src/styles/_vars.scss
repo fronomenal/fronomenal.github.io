@@ -21,13 +21,18 @@ $dkclr-on-bg-alt : hsla(0,0%,100%,0.7);
 
 //mixins/extensions
 
-@mixin max{
-    @media only screen and (max-width: 768px){
+@mixin min{
+    @media only screen and (min-width: 768px){
         @content;
     }
 }
-@mixin min{
-    @media only screen and (min-width: 768px){
+@mixin mobile{
+    @media only screen and (max-width: 480px){
+        @content;
+    }
+}
+@mixin max{
+    @media only screen and (max-width: 768px){
         @content;
     }
 }

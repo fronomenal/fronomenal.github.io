@@ -79,11 +79,6 @@
                         left: 15vw;
                         opacity: 0.3;
                     }
-
-                    @include max(){
-                        left: 15vw;
-                        opacity: 0.3;
-                    }
                 }
             }
 
@@ -380,6 +375,10 @@
                         display: block;
                         margin-inline: auto;
 
+                        @include mobile(){
+                            width: auto;
+                        }
+
                     }
 
 
@@ -516,6 +515,7 @@
                         left: -35px;
                         position: relative;
                         top: -4px;
+                        
                     }
 
                     .Hover{
@@ -720,6 +720,81 @@
                         }
 
                     }
+                    
+                    @include mobile(){
+
+                        &.twelve, &.eleven, &.ten{
+                            display: none;
+                        }
+    
+                        &.one{
+                            left: 21px;
+                            position: relative;
+                            top: 21px;
+                        }
+    
+    
+    
+                        &.two{
+                            left: -16px;
+                            position: relative;
+                            top: 21px;
+                        }
+                        
+                        
+                        
+                        &.three{
+                            left: -102px;
+                            position: relative;
+                            top: 56px;
+                        }
+                        
+                        
+                        
+                        &.four{
+                            left: 73px;
+                            position: relative;
+                            top: -15px;
+                        }
+                        
+                        
+                        &.five{
+                            left: 35px;
+                            position: relative;
+                            top: -15px;
+                        }
+                        
+                        &.six{
+                            left: 2px;
+                            position: relative;
+                            top: 20px;
+                        }
+                        
+                        
+                        
+                        &.seven{
+                            left: -31px;
+                            position: relative;
+                            top: 56px;
+                        }
+                        
+                        
+                        &.eight{
+                            left: -69px;
+                            position: relative;
+                            top: 56px;
+                        }
+                        
+                        
+                        
+                        &.nine{
+                            left: 106px;
+                            position: relative;
+                            top: -15px;
+                        }
+
+
+                    }
                 }
 
                 .mob {
@@ -748,6 +823,12 @@
 
                     @include min(){
                         display: none;
+                    }
+                    
+                    @include mobile(){
+                        .frequency-box{
+                            top: -120px;
+                        }
                     }
 
                 }
@@ -795,6 +876,11 @@
                         .circle-progress{
                             width: 150px;
                         }
+                    }
+
+                    @include mobile(){
+                        margin-top: 30px;
+
                     }
                 }
 
@@ -927,20 +1013,24 @@
                         width: 100%;
                         max-width: 1420px;
                         margin-inline: auto;
-                        padding: 0 50px;
                         
                         .wrapper {
                             position: relative;
                             padding: 0 0 50px 0;
                             margin-inline: auto;
 
-                            & img{
+                            img{
                                 width: 320px;
                                 height: 180px;
 
                                 @include min(){
                                     width: 400px;
                                     height: 225px;
+
+                                }
+                                @include mobile(){
+                                    width: 240px;
+                                    height: 135px;
 
                                 }
                             }
@@ -983,6 +1073,10 @@
                                     text-align: right;
                                     color: var(--on-bg-alt);
 
+                                    @include mobile(){
+                                        text-align: center;
+
+                                    }
                                 }
                             }
 
@@ -990,6 +1084,7 @@
                                 list-style-type: none;
                                 position: relative;
                                 display: block;
+                                width: auto !important;
 
                                 & li {
                                     position: absolute;
@@ -1008,10 +1103,6 @@
                                     & img {
                                         display: block;
                                         border: none;
-                                    }
-
-                                    @include max(){
-                                        margin-left: -6%;
                                     }
                                 }
 
@@ -1097,7 +1188,7 @@
 
     #recline{
         position: relative;
-        max-width: 640px;
+        max-width: 90vw;
         left: 50vw;
         transform: translateX(-50%);
         cursor: pointer;
@@ -1118,6 +1209,10 @@
         
         @include min(){
             bottom: 15px;
+        }
+
+        @include mobile(){
+            display: none;
         }
     }
     

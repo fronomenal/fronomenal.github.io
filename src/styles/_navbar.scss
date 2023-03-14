@@ -44,6 +44,10 @@
         padding-top: .5rem;
         width: 2rem;
         margin: 0 1.5rem;
+
+        @include mobile(){
+            margin: 0 1rem;
+        }
     }
 
     .nav-link{
@@ -138,6 +142,17 @@
                         opacity: 1;
                     }
                     
+                }
+
+                @include mobile(){
+
+                    &:hover{
+                        span{
+                            display: none;
+                        }
+                        
+                    }
+
                 }
 
             }
