@@ -145,12 +145,8 @@
                 }
 
                 @include mobile(){
-
-                    &:hover{
-                        span{
-                            display: none;
-                        }
-                        
+                    span{
+                        display: none;
                     }
 
                 }
@@ -158,13 +154,21 @@
             }
         }
 
+        .nav-icon{
+            width: 1.5rem;
+        }
+
         .theme-wrapper{
             margin-left: auto;
-            padding-right: 9px;
+            transform: translateX(-21px);
         }
 
         nav:hover + .theme-wrapper{
             display: none;
+
+            @include mobile{
+                display: block;
+            }
         }
 
     }

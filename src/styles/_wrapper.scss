@@ -243,6 +243,10 @@
                     
                 }
 
+                @include min(){
+                    background: transparent;
+                }
+
             }
 
             .about-info{
@@ -387,6 +391,13 @@
             }
 
             &#langs{
+                max-width: 100vw;
+                overflow-x: hidden;
+                margin-left: -2%;
+
+                h1{
+                    margin-left: 2%;
+                }
                 
                 .subtitle{
                     color: var(--on-bg);
@@ -734,7 +745,6 @@
                         }
     
     
-    
                         &.two{
                             left: -16px;
                             position: relative;
@@ -742,13 +752,11 @@
                         }
                         
                         
-                        
                         &.three{
                             left: -102px;
                             position: relative;
                             top: 56px;
                         }
-                        
                         
                         
                         &.four{
@@ -769,7 +777,6 @@
                             position: relative;
                             top: 20px;
                         }
-                        
                         
                         
                         &.seven{
