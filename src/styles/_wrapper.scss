@@ -80,6 +80,20 @@
                         opacity: 0.3;
                     }
                 }
+
+                    
+                    @media only screen and (min-width: 1280px){
+                        .cus-home-flex{
+                            display: flex;
+                            justify-content: space-evenly;
+                        }
+
+                        .main-image {
+                            position: relative;
+                            left: 0px;
+                            top: -180px;
+                        }
+                    }
             }
 
             &#skills{
