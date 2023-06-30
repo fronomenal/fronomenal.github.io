@@ -363,12 +363,7 @@
                         background: transparent;
                         padding: 15px 35px;
                         color: var(--on-bg-alt);
-                        border: 1px solid transparent;
-
-                        &:hover{
-                            border: 1px solid var(--secondary);
-                            border-top: transparent;
-                        }
+                        border-top: transparent;
                     }
                 }
 
