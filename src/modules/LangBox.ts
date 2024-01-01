@@ -74,6 +74,7 @@ export default class LangBox
         }
 
         this.circProg.value = proficiency;
+        this.langProf.get(0)?.scrollIntoView({behavior: "smooth"});
       }
     }
 
