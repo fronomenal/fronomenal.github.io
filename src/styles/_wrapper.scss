@@ -1009,6 +1009,10 @@
                         font-size: smaller;
                     }
                     
+                    @media only screen and (max-width: 1280px){
+                        max-width: 96%;
+                    }
+                    
 
                     @media (pointer:none), (pointer:coarse) {
 
