@@ -1,7 +1,7 @@
 import jQuery from "jquery";
 import {ScrollToSmooth, easeOutCubic} from 'scrolltosmooth';
 
-export default class ThemeToggler
+export default class ToolsGrid
 {
     grid: any;
     name: JQuery<HTMLElement>;
