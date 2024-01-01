@@ -19,9 +19,9 @@ export default class LangBox
     constructor(){
         this.detailLinks = jQuery("a.details");
         this.imglinks = jQuery("a.prePhoto");
-        this.langProf = jQuery('.lang-proficiency');
+        this.langProf = jQuery(".lang-proficiency");
         this.genModal = jQuery("<div></div>", {"class":"cus-modal"});
-        this.closeBtn = jQuery('<i></i>', {"class": "fas fa-times cus-close-btn"});
+        this.closeBtn = jQuery("<i></i>", {"class": "fas fa-times cus-close-btn"});
 
         this.body = jQuery("body");
         this.circProg = new CircleProgress(".pf-progress", {value: 0, max: 100, textFormat: "percent"});
@@ -49,15 +49,9 @@ export default class LangBox
     }
 
     private setProfMap(){
-      this.detailLinks.each((i, ele) => {
-        if(ele.dataset.lang && i <= 2){
-          languageProficiency.set(ele.dataset.lang, 50)
-        }else if(ele.dataset.lang && i <= 7){
-          if(i > 5) languageProficiency.set(ele.dataset.lang, 75)
-          else languageProficiency.set(ele.dataset.lang, 65)
-        }else if(ele.dataset.lang && i >= 8){
-          languageProficiency.set(ele.dataset.lang, 90)
-        }
+      this.detailLinks.each((_i, ele) => {
+        if(ele.dataset.lang && ele.dataset.profLvl)
+          languageProficiency.set(ele.dataset.lang, parseFloat(ele.dataset.profLvl))
       });
     }
 
@@ -67,11 +61,17 @@ export default class LangBox
       const proficiency = languageProficiency.get(lang);
       if (proficiency) {
         this.langProf.find('.pf-progress').data("progress", proficiency);
+        jQuery(".circle-progress-circle", ).css({"fill": "", "stroke-width": ""});
 
-        if (proficiency >= 90) this.langProf.find('.pf-level').html("Proficiency: <span>Expert</span>")
-        else if (proficiency >= 75) this.langProf.find('.pf-level').html("Proficiency: <span>Advanced</span>")
-        else if (proficiency >= 65) this.langProf.find('.pf-level').html("Proficiency: <span>Intermediate</span>")
-        else this.langProf.find('.pf-level').html("Proficiency: <span>Experienced</span>");
+        if (proficiency >= 90) { this.langProf.find('.pf-level').html("Proficiency: <span>Expert</span>");}
+        else if (proficiency >= 75) { this.langProf.find('.pf-level').html("Proficiency: <span>Advanced</span>");}
+        else if (proficiency >= 65) { this.langProf.find('.pf-level').html("Proficiency: <span>Intermediate</span>");}
+        else if (proficiency >= 60) { this.langProf.find('.pf-level').html("Proficiency: <span>Experienced</span>");}
+        else {
+          const deprecatedColor = "#D21404";
+          this.langProf.find('.pf-level').html(`<span style='color: ${deprecatedColor}; text-transform: uppercase'>Deprecated</span>`); 
+          jQuery(".circle-progress-circle", ).css({"fill": deprecatedColor, "stroke-width": "0px"})
+        }
 
         this.circProg.value = proficiency;
       }
