@@ -43,9 +43,12 @@ export default class LangBox
 
     private toggleLangDetails(event: any){
       event.preventDefault();
+      
       this.setProfMap();
       this.assignProDivValues(event.target);
       this.langProf.fadeIn();
+
+      this.langProf.get(0)?.scrollIntoView({behavior: "smooth"});
     }
 
     private setProfMap(){
@@ -72,10 +75,9 @@ export default class LangBox
           this.langProf.find('.pf-level').html(`<span style='color: ${deprecatedColor}; text-transform: uppercase'>Deprecated</span>`); 
           jQuery(".circle-progress-circle", ).css({"fill": deprecatedColor, "stroke-width": "0px"})
         }
-
-        this.circProg.value = proficiency;
-        this.langProf.get(0)?.scrollIntoView({behavior: "smooth"});
       }
+      
+      this.circProg.value = proficiency;
     }
 
     private createImgModal(src : string){
