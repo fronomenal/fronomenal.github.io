@@ -68,8 +68,7 @@ export default class LangBox
 
         if (proficiency >= 90) { this.langProf.find('.pf-level').html("Proficiency: <span>Expert</span>");}
         else if (proficiency >= 75) { this.langProf.find('.pf-level').html("Proficiency: <span>Advanced</span>");}
-        else if (proficiency >= 65) { this.langProf.find('.pf-level').html("Proficiency: <span>Intermediate</span>");}
-        else if (proficiency >= 60) { this.langProf.find('.pf-level').html("Proficiency: <span>Experienced</span>");}
+        else if (proficiency >= 60) { this.langProf.find('.pf-level').html("Proficiency: <span>Intermediate</span>");}
         else {
           const deprecatedColor = "#D21404";
           this.langProf.find('.pf-level').html(`<span style='color: ${deprecatedColor}; text-transform: uppercase'>Deprecated</span>`); 
